@@ -1,0 +1,87 @@
+// ============================================================================
+// Settings
+// ============================================================================
+
+#include "Settings.bff"	
+
+// ============================================================================
+// External dependencies
+// ============================================================================
+
+#include "Extern.bff"	
+
+// ============================================================================
+// Compilers
+// ============================================================================
+
+#include "Compilers.bff"	
+	
+// ============================================================================
+// Build Configs
+// ============================================================================
+
+#include "BuildConfigs.bff"	
+
+// ============================================================================
+// Project Configs
+// ============================================================================
+
+#include "ProjectConfigs.bff"	
+
+// ============================================================================
+// Projects
+// ============================================================================
+
+#include "Code\Common\Common.bff"		
+#include "Code\Graphic\Graphic.bff"
+#include "Code\Engine\Engine.bff"
+#include "Code\OneWatcher\OneWatcher.bff"
+#include "Code\QEditorPanelBox\QEditorPanelBox.bff"
+#include "Code\QEditor\QEditor.bff"
+
+// ============================================================================
+// Solution Generation
+// ============================================================================
+
+VSSolution( 'OneWatcher-sln' )
+{
+	 // Work around for Visual Studio F5 behaviour up-to-date check
+	.Deps = [ .Projects     = { 'OneWatcher-vcxproj' }
+			  .Dependencies = { 'Common-vcxproj', 'Graphic-vcxproj', 'Engine-vcxproj' } ]
+			
+	.SolutionDependencies = { .Deps }
+	
+	.SolutionBuildProject  = 'OneWatcher-vcxproj'
+	
+	.SolutionOutput		= 'Build/OneWatcherVS2015.sln'
+	
+	.SolutionProjects	= { 'Common-vcxproj',
+							'Graphic-vcxproj',
+							'Engine-vcxproj',
+							'OneWatcher-vcxproj' }
+	
+	.SolutionConfigs	= .ProjectConfigs
+}
+
+// ----------------------------------------------------------------------------
+
+VSSolution( 'QEditor-sln' )
+{
+	 // Work around for Visual Studio F5 behaviour up-to-date check
+	.Deps = [ .Projects     = { 'QEditor-vcxproj' }
+			  .Dependencies = { 'Common-vcxproj', 'Graphic-vcxproj', 'Engine-vcxproj', 'QEditorPanelBox-vcxproj' } ]
+			
+	.SolutionDependencies = { .Deps }
+	
+	.SolutionBuildProject  = 'QEditor-vcxproj'
+	
+	.SolutionOutput		= 'Build/QEditorVS2015.sln'
+	
+	.SolutionProjects	= { 'Common-vcxproj',
+							'Graphic-vcxproj',
+							'Engine-vcxproj',
+							'QEditorPanelBox-vcxproj',
+							'QEditor-vcxproj'}
+	
+	.SolutionConfigs	= .ProjectConfigsEditor
+}

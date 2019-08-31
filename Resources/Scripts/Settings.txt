@@ -1,0 +1,28 @@
+{
+	subscript AudioSettings
+	{
+		int MUSIC_VOLUME 2
+		int SFX_VOLUME 50
+	}
+	subscript ResourceSettings
+	{
+		string ResourceFontsDir Fonts/
+		string ResourceMeshesDir Meshes/
+		string ResourceRootDir ../Resources/
+		string ResourceScriptsDir Scripts/
+		string ResourceShadersDir Shaders/
+		string ResourceTexturesDir Textures/
+	}
+	subscript VideoSettings
+	{
+		int ADAPTER 0
+		int BLOOM 1
+		bool LIGHTRAYS true
+		int SCREENHEIGHT 1080
+		int SCREENWIDTH 1920
+		bool VSYNC false
+		bool WINDOWED true
+		float ZFAR 1.3e+04
+		float ZNEAR 1
+	}
+}

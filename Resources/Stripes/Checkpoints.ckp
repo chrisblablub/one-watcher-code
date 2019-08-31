@@ -1,0 +1,16 @@
+{
+	vector4 endBotColor 0.005522 0.187 0.4762 1
+	vector4 endTopColor 0.001687 0.02655 0.06575 1
+	float endWidth 1
+	bool fadeOut true
+	bool growAlternatingly false
+	bool growVertically false
+	int numSlices 20
+	vector4 startBotColor 5.077e-06 0.122 1 1
+	vector4 startTopColor 0.01431 0.1701 0.3066 1
+	float startWidth 0
+	bool templateInit true
+	float timeFadeDuration 0
+	float timeSpawnDuration 0.25
+	float timeSpawnOffset 0.025
+}

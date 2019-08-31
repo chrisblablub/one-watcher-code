@@ -1,0 +1,19 @@
+{
+	subscript texture
+	{
+		string texture Sprites/laser.png
+	}
+
+
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 1
+		int FrameCount 4
+		int FrameWidth 128	
+		int FrameHeight 16
+		float FrameTime 0.05
+		int BorderWidth 0
+	}
+}

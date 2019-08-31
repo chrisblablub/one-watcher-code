@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtEditorClass</class>
+ <widget class="QMainWindow" name="QtEditorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>929</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">QEditor</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>929</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+    background-color: #555a63;
+	border: 0px;
+	color: #EEEEEE;
+	padding:5px;
+
+}
+QMenuBar::item {
+    border-radius: 4px;
+	color: #EEEEEE;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+QMenuBar::item:pressed {
+    border-radius: 4px;
+	color: #555a63;
+   background-color: #EEEEEE;
+}
+
+QMenuBar::item:selected {
+    border-radius: 0px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}
+</string>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuMain">
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QMenu
+{
+    background-color: #EEEEEE;
+	border: 0px solid #555555;
+	color: #333333;
+	padding:2px;
+	padding-left:5px;
+}
+
+QMenu::item:selected
+{
+    padding:0px;
+    padding-left:2px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}</string>
+    </property>
+    <property name="title">
+     <string>MAIN</string>
+    </property>
+    <addaction name="pActionMainNewLevel"/>
+    <addaction name="pActionMainSaveLevel"/>
+    <addaction name="pActionMainSaveLevelAs"/>
+    <addaction name="pActionMainLoadLevel"/>
+    <addaction name="pActionMainExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="styleSheet">
+     <string notr="true">QMenu
+{
+    background-color: #EEEEEE;
+	border: 0px solid #555555;
+	color: #333333;
+	padding:2px;
+	padding-left:5px;
+}
+
+QMenu::item:selected
+{
+    padding:0px;
+    padding-left:2px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}</string>
+    </property>
+    <property name="title">
+     <string>VIEW</string>
+    </property>
+    <addaction name="m_pActionViewResetCamera"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="styleSheet">
+     <string notr="true">QMenu
+{
+    background-color: #EEEEEE;
+	border: 0px solid #555555;
+	color: #333333;
+	padding:2px;
+	padding-left:5px;
+}
+
+QMenu::item:selected
+{
+    padding:0px;
+    padding-left:2px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}</string>
+    </property>
+    <property name="title">
+     <string>TOOLS</string>
+    </property>
+    <addaction name="pActionToolsResizeLevel"/>
+    <addaction name="pActionToolsOffsetLevel"/>
+    <addaction name="separator"/>
+    <addaction name="pActionToolsEntityBrowser"/>
+    <addaction name="pActionToolsNodeBrowser"/>
+    <addaction name="separator"/>
+    <addaction name="pActionToolsTerrain"/>
+    <addaction name="separator"/>
+    <addaction name="pActionToolsResetPainter"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="styleSheet">
+     <string notr="true">QMenu
+{
+    background-color: #EEEEEE;
+	border: 0px solid #555555;
+	color: #333333;
+	padding:2px;
+	padding-left:5px;
+}
+
+QMenu::item:selected
+{
+    padding:0px;
+    padding-left:2px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}</string>
+    </property>
+    <property name="title">
+     <string>WINDOW</string>
+    </property>
+    <addaction name="pActionWindowFullscreen"/>
+    <addaction name="pActionWindowBigPicture"/>
+    <addaction name="pActionWindowSidePane"/>
+    <addaction name="pActionWindowQuickAccessPane"/>
+   </widget>
+   <widget class="QMenu" name="menuLEVEL">
+    <property name="styleSheet">
+     <string notr="true">QMenu
+{
+    background-color: #EEEEEE;
+	border: 0px solid #555555;
+	color: #333333;
+	padding:2px;
+	padding-left:5px;
+}
+
+QMenu::item:selected
+{
+    padding:0px;
+    padding-left:2px;
+    background-color: #6e788a;
+	color: #EEEEEE;
+}</string>
+    </property>
+    <property name="title">
+     <string>LEVEL</string>
+    </property>
+    <addaction name="pActionLevelEnvironmentAndTerrain"/>
+    <addaction name="pActionLevelPostProcessing"/>
+   </widget>
+   <widget class="QMenu" name="menuLIGHTING">
+    <property name="title">
+     <string>LIGHTING</string>
+    </property>
+    <addaction name="pActionLightingBakeLighting"/>
+   </widget>
+   <addaction name="menuMain"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuLEVEL"/>
+   <addaction name="menuLIGHTING"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+background: #555a63;
+border:1px solid #6e788a;
+margin:1px;
+color:white;
+
+font-size:13px;
+font-family:Calibri;
+
+padding:3px;
+color:white;
+
+border:1px solid #6e788a;
+
+QToolButton
+{
+	border: 2px solid red;
+}
+</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="pActionMainNewLevel">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>New Level</string>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="pActionMainSaveLevel">
+   <property name="text">
+    <string>Save Level</string>
+   </property>
+  </action>
+  <action name="pActionMainSaveLevelAs">
+   <property name="text">
+    <string>Save Level As</string>
+   </property>
+  </action>
+  <action name="pActionMainLoadLevel">
+   <property name="text">
+    <string>Load Level</string>
+   </property>
+  </action>
+  <action name="pActionMainExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="m_pActionViewResetCamera">
+   <property name="text">
+    <string>Reset Camera</string>
+   </property>
+  </action>
+  <action name="pActionToolsResizeLevel">
+   <property name="text">
+    <string>Resize Level</string>
+   </property>
+  </action>
+  <action name="pActionToolsOffsetLevel">
+   <property name="text">
+    <string>Offset Level</string>
+   </property>
+  </action>
+  <action name="pActionToolsEntityBrowser">
+   <property name="text">
+    <string>Entity Browser</string>
+   </property>
+  </action>
+  <action name="actionGeneral_Sky_and_Fog">
+   <property name="text">
+    <string>General, Sky and Fog</string>
+   </property>
+  </action>
+  <action name="actionBorders_and_Layers">
+   <property name="text">
+    <string>Borders and Layers</string>
+   </property>
+  </action>
+  <action name="actionPost_Processing">
+   <property name="text">
+    <string>Post Processing</string>
+   </property>
+  </action>
+  <action name="actionWeather">
+   <property name="text">
+    <string>Weather</string>
+   </property>
+  </action>
+  <action name="actionEntities">
+   <property name="text">
+    <string>Entities</string>
+   </property>
+  </action>
+  <action name="pActionWindowBigPicture">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>     Big Picture</string>
+   </property>
+  </action>
+  <action name="pActionWindowSidePane">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>     Side Pane</string>
+   </property>
+  </action>
+  <action name="pActionWindowQuickAccessPane">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>     Quick Access Pane</string>
+   </property>
+  </action>
+  <action name="pActionWindowFullscreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>     Fullscreen</string>
+   </property>
+  </action>
+  <action name="pActionLevelSkyAndFog">
+   <property name="text">
+    <string>Sky and Fog</string>
+   </property>
+  </action>
+  <action name="actionTerrain">
+   <property name="text">
+    <string>Terrain</string>
+   </property>
+  </action>
+  <action name="pActionToolsTerrain">
+   <property name="text">
+    <string>Terrain</string>
+   </property>
+  </action>
+  <action name="pActionLevelEnvironmentAndTerrain">
+   <property name="text">
+    <string>Environment and Terrain</string>
+   </property>
+  </action>
+  <action name="pActionLevelPostProcessing">
+   <property name="text">
+    <string>Post Processing</string>
+   </property>
+  </action>
+  <action name="pActionLightingBakeLighting">
+   <property name="text">
+    <string>Bake Lighting</string>
+   </property>
+  </action>
+  <action name="pActionToolsResetPainter">
+   <property name="text">
+    <string>Reset Painter</string>
+   </property>
+  </action>
+  <action name="pActionToolsNodeBrowser">
+   <property name="text">
+    <string>Node Browser</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../qeditor.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,34 @@
+﻿Build started 02.08.2014 21:34:57.
+     1>Project "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\3d.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3d.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         E:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\..\inc /Zi /nologo /W4 /WX- /Od /Oy- /D _CONSOLE /D WIN32 /D _DEBUG /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\\" /Fd"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\common.cpp ..\common_platform.cpp ..\3d.cpp
+         3d.cpp
+         common_platform.cpp
+         common.cpp
+         Generating Code...
+       Link:
+         E:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\lib fmodL_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.lib" /MACHINE:X86 "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\common.obj"
+         "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\common_platform.obj"
+         "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3d.obj"
+         3d.vcxproj -> D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe;#1" /manifest "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe.intermediate.manifest"
+       PostBuildEvent:
+         if not exist ..\bin mkdir ..\bin 
+         copy /Y "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3dL.exe" ..\bin 
+         copy /Y ..\..\lib\fmodL.dll ..\bin
+         copy /Y ..\..\lib\fmodL.dll "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\"
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+                 1 file(s) copied.
+       FinalizeBuildStatus:
+         Deleting file "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3d.unsuccessfulbuild".
+         Touching "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\_builds\3d\Debug\Win32\3d.lastbuildstate".
+     1>Done Building Project "D:\Develop\FMOD Studio API Windows\api\lowlevel\examples\vs2010\3d.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.76

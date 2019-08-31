@@ -1,0 +1,25 @@
+{
+	subscript texture
+	{
+		string texture Sprites/fog.png
+	}
+
+
+
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 1
+		int FrameCount 1
+		int FrameWidth 128
+		int FrameHeight 128
+		float FrameTime 1
+		int BorderWidth 0
+	}
+
+	vector4 diffuse 1 1 1 1
+	vector4 specular 1 1 1 1
+	float specularPower 10
+
+}

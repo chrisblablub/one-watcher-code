@@ -1,0 +1,94 @@
+// ============================================================================
+// FastBuild: QEditorPanelBox
+// ============================================================================
+{
+	.ProjectName	= 'QEditorPanelBox'
+	.ProjectRoot	= 'Code\QEditorPanelBox'
+	
+	// ============================================================================
+	// VS Project
+	// ============================================================================
+	
+	VCXProject( '$ProjectName$-vcxproj' )
+	{
+		.ProjectOutput	   = 'Build\$ProjectName$\$ProjectName$.vcxproj'
+		.ProjectInputPaths = '$ProjectRoot$'
+		.ProjectBasePath   = '$ProjectRoot$'
+	}
+	
+	// ============================================================================
+	// Qt MOC
+	// ============================================================================
+	
+	ObjectList( '$ProjectName$-MocGen' )
+	{
+		Using( .qtMocCompiler )
+		
+		.CompilerInputPath   = '$ProjectRoot$\Core'
+		.CompilerIncludePath = '$ProjectRoot$'
+		.CompilerOutputPath	 = '$IntermediateDir$\$ProjectName$\MOCGen'
+	}
+	
+	// ============================================================================
+	// Unity: moc'ed + source code
+	// ============================================================================
+	
+	Unity( '$ProjectName$-Unity' )
+	{
+		.UnityInputPath           = '$ProjectRoot$\'
+		.UnityInputObjectLists    = '$ProjectName$-MocGen'
+		.UnityOutputPath          = '$IntermediateDir$\Unity\$ProjectRoot$\'
+	}
+		
+	// ============================================================================
+	// Targets
+	// ============================================================================
+	
+	ForEach( .BuildConfig in .Configs )
+	{
+		Using( .BuildConfig )
+	
+		ObjectList( '$ProjectName$-Obj-$Platform$-$Config$' )
+		{
+			.CompilerOptions 	  + ' -D"BUILD_DLL"'
+			.CompilerInputUnity	  = '$ProjectName$-Unity'
+			.CompilerIncludePath  = '$ProjectRoot$' // Or a subfolder if you keep all your ui isolated
+			.CompilerOutputPath	  = '$IntermediateDir$\$Platform$\$Config$\$ProjectName$'
+		}
+		
+		DLL( '$ProjectName$-Dll-$Platform$-$Config$' )
+		{
+			.Libraries			= { 'QEditorPanelBox-Obj-$Platform$-$Config$' }
+									
+			.LinkerOutput		= '$Platform$\$ProjectName$$PlatformSuffix$$BuildSuffix$.dll'
+			.LinkerOptions		+ ' -SUBSYSTEM:WINDOWS'
+								+ ' -DLL'	
+								+ ' -D"BUILD_DLL"'
+								+ ' qtmain$QtBuildSuffix$.lib'
+								+ ' Qt5Core$QtBuildSuffix$.lib'
+								+ ' Qt5Gui$QtBuildSuffix$.lib'
+								+ ' Qt5Widgets$QtBuildSuffix$.lib'
+								+ ' Qt5Xml$QtBuildSuffix$.lib'
+		}
+		
+		Alias( '$ProjectName$-$Platform$-$Config$' )   
+		{ 
+			.Targets = { '$ProjectName$-MOCGen',
+						 '$ProjectName$-Dll-$Platform$-$Config$' }
+		}
+	}
+	
+	Alias( '$ProjectName$-Debug' )
+	{
+		.Targets = { '$ProjectName$-MOCGen',
+					 '$ProjectName$-x86-Debug', 
+					 '$ProjectName$-x64-Debug' }
+	}
+	
+	Alias( '$ProjectName$-Release' )
+	{
+		.Targets = { '$ProjectName$-MOCGen',
+					 '$ProjectName$-x86-Release', 
+					 '$ProjectName$-x64-Release' }
+	}
+}

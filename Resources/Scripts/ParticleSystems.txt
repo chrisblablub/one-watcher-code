@@ -1,0 +1,5710 @@
+{
+	string renderer Default
+	string texture Sprites\stream_t1.png
+	subscript Affectors
+	{
+	}
+	subscript BEAM
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\beamparticle.png
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			int facing 1
+			float fadeIn 0.3
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1
+			float lifeTimeMin 1
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 700
+			float particleSizeEnd 900
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 4.526e-05 -1.477 -0.0003453
+		}
+	}
+	subscript BEAM_DISTORT
+	{
+		bool autoScale true
+		string renderer Distort
+		string texture Sprites/particle_nmap01.png
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0 0.4995 1 0.95
+			vector4 colorEnd 0 0 0.4995 0.95
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 4
+			int facing 1
+			float fadeIn 0.3
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1
+			float lifeTimeMin 1
+			int numParticles 1
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 2
+			float velocityBegin 20
+			float velocityEnd 50
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 1
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.571 0
+		}
+	}
+	subscript BEAM_T1
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\beam_t1.png
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 2
+			vector4 colorEnd 0 0.502 1 2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 4
+			int facing 1
+			float fadeIn 0.3
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1
+			float lifeTimeMin 1
+			int numParticles 4
+			int orientation 0
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 2
+			float velocityBegin 20
+			float velocityEnd 50
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 1
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.142 -1.571 3.142
+		}
+	}
+	subscript BEAM_T2
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\beam_t1.png
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.502 0 2
+			vector4 colorEnd 1 0 0 2
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 4
+			int facing 1
+			float fadeIn 0.3
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1
+			float lifeTimeMin 1
+			int numParticles 4
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 2
+			float velocityBegin 20
+			float velocityEnd 50
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.35
+			float warmUpTime 0
+			vector3 yawPitchRoll 4.53e-05 -1.477 -5.712e-06
+		}
+	}
+	subscript BURNER
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\burner.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			vector3 emitterBoxMax -12 36 20
+			vector3 emitterBoxMin 12 -20 -20
+			float fadeIn 0.2
+			float fadeOut 0.2
+			bool globalSpace true
+			float lifeTimeMax 1.1
+			float lifeTimeMin 0.8
+			int numParticles 10
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0
+			vector3 position 0 48 -26.19
+			int sequence 1
+			float velocityAngle 0
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.565 0
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			float fadeIn 0.3
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 2
+			float lifeTimeMin 1.5
+			int numParticles 20
+			int orientation 2
+			float orientationSpeed 1
+			float particleSizeBegin 30
+			float particleSizeEnd 30
+			float particleSizeRange 0.2
+			vector3 position 0 32 0
+			int sequence 0
+			float velocityAngle 10.1
+			float velocityBegin 80
+			float velocityEnd 110
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 8.405e-05 -1.563 6.723e-05
+		}
+	}
+	subscript BURNER_BIG
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\fire.png
+		subscript Affectors
+		{
+			string RandomRotator RandomRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector3 bboxMax 50 50 400
+			vector3 bboxMin -50 -50 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox false
+			float emitDuration 0
+			float emitRate 13
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 2
+			float lifeTimeMin 1.8
+			int numParticles 45
+			float particleSizeBegin 1400
+			float particleSizeEnd 1700
+			vector3 position 0 0 0
+			vector3 size 0 0 0
+			float speedMax 250
+			float speedMin 230
+			float velocityAngle 0
+			float warmUpTime 0
+			vector3 yawPitchRoll 8.377e-05 -1.56 6.701e-05
+		}
+	}
+	subscript CHARACTER
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 35
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace true
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 25
+			float particleSizeEnd 25
+			float particleSizeRange 0
+			vector3 position 0 -21.5 0
+			int sequence 1
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.573 -4.895e-06 -3.14
+		}
+	}
+	subscript CHARACTER2
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 40
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 20
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 25
+			float particleSizeEnd 8
+			float particleSizeRange 0
+			vector3 position -80 0 0
+			int sequence 1
+			float velocityAngle 60
+			float velocityBegin 150
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.566 0
+		}
+	}
+	subscript CHARACTER3
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.502 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.6
+			float lifeTimeMin 0.4
+			int numParticles 50
+			int orientation 0
+			float orientationSpeedMax 0
+			float orientationSpeedMin 0
+			float particleSizeBegin 5
+			float particleSizeEnd 2
+			float particleSizeRange 0.4
+			vector3 position -0.4923 0 0
+			float radius 28.25
+			int sequence 2
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 10
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -2.98e-08 1.568
+		}
+	}
+	subscript CHARACTER3_b
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 15
+			int orientation 2
+			float orientationSpeed 2.5
+			float particleSizeBegin 30
+			float particleSizeEnd 25
+			float particleSizeRange 0
+			vector3 position 0 0 -17.59
+			float radius 4.815
+			int sequence 0
+			float velocityAngle 10
+			float velocityBegin 1
+			float velocityEnd 2
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.564 0
+		}
+	}
+	subscript CHARACTER4
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 40
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.2
+			int numParticles 20
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 15
+			float particleSizeEnd 15
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			float velocityAngle 360
+			float velocityBegin 80
+			float velocityEnd 50
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 1.427 -1.532 -1.427
+		}
+	}
+	subscript CHARACTER5
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.4
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			vector3 emitterBoxMax 4 4 20
+			vector3 emitterBoxMin -4 -4 -4
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 15
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 30
+			float particleSizeEnd 15
+			float particleSizeRange 0
+			vector3 position -31.99 -0.6272 0
+			int sequence 2
+			float velocityAngle 0
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 1.571 9.239e-07 -1.566
+		}
+	}
+	subscript CHARACTER6
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			vector3 emitterBoxMax -12 4 20
+			vector3 emitterBoxMin -4 -4 -4
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 15
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 15
+			float particleSizeRange 0
+			vector3 position 7.456 0.9837 0
+			int sequence 1
+			float velocityAngle 0
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 1.092e-05 -1.566 2.185e-05
+		}
+	}
+	subscript CHARACTER_BIRTH
+	{
+		string renderer Default
+		string texture Sprites\char_birth.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.5098 0.8353 0.9922 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0.1
+			float emitRate 2000
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.4
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 45
+			float particleSizeEnd 7
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			float radius 118.9
+			int sequence 1
+			float velocityAngle 1
+			float velocityBegin 1
+			float velocityEnd 0
+			float velocityExp 2
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.562 0
+		}
+	}
+	subscript CHARACTER_DEATH
+	{
+		string renderer Default
+		string texture Sprites\character_death.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.5176 0.8667 0.9843 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0.3
+			float emitRate 2000
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 25
+			float particleSizeEnd 2
+			float particleSizeRange 0.05
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 500
+			float velocityEnd 10
+			float velocityExp 2
+			bool velocityFromCenter false
+			float velocityRange 0
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -0 -3.142
+		}
+	}
+	subscript CHARACTER_DOUBLE_JUMP
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 2
+			vector4 colorEnd 1 1 1 2
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 55
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 17
+			float particleSizeRange 0.1
+			vector3 position -16 0 0
+			int sequence 1
+			float velocityAngle 5
+			float velocityBegin 10
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -2.98e-07 -1.569
+		}
+	}
+	subscript CHARACTER_ENERGY_PARTICLES
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 12
+			vector3 emitterBoxMax 20 4 4
+			vector3 emitterBoxMin -20 -4 -4
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0.2
+			vector3 position 0 0 -17.06
+			int sequence 3
+			float velocityAngle 0
+			float velocityBegin -150
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.401e-06 1.563
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 6
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.8
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 5.5
+			float orientationSpeedMin -5.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0
+			vector3 position 0 0 -31.79
+			int sequence 3
+			float velocityAngle 360
+			float velocityBegin 250
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -0.002317 -3.142
+		}
+	}
+	subscript CHARACTER_ENERGY_TRACE
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 12
+			vector3 emitterBoxMax 20 4 4
+			vector3 emitterBoxMin -20 -4 -4
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0.2
+			vector3 position 0 0 -17.06
+			int sequence 3
+			float velocityAngle 0
+			float velocityBegin -150
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.46e-06 1.563
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 6
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.8
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 5.5
+			float orientationSpeedMin -5.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0
+			vector3 position 0 0 -31.79
+			int sequence 3
+			float velocityAngle 360
+			float velocityBegin 250
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -0.002317 -3.142
+		}
+	}
+	subscript CHARACTER_ENERGY_TRACE_CPY
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 20 4 4
+			vector3 emitterBoxMin -20 -4 -4
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.8
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0.2
+			vector3 position 182.2 0 0
+			int sequence 3
+			float velocityAngle 0
+			float velocityBegin -150
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.431e-06 1.563
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 6
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.8
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 5.5
+			float orientationSpeedMin -5.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0
+			vector3 position 7.193 -0.8188 0
+			int sequence 3
+			float velocityAngle 360
+			float velocityBegin 250
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -0.002317 -3.142
+		}
+		subscript Emitter#2
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.4
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0
+			vector3 position -123.3 0.5721 0
+			float radius 43
+			int sequence 3
+			float velocityAngle 360
+			float velocityBegin 250
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript CHARACTER_ENERGY_TRACE_CPY2
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 20 4 4
+			vector3 emitterBoxMin -20 -4 -4
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.8
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0.2
+			vector3 position 0 0 0
+			int sequence 3
+			float velocityAngle 0
+			float velocityBegin -150
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.431e-06 1.563
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0 1 1 5
+			vector4 colorEnd 0 1 1 5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.4
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 1
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			float radius 66.19
+			int sequence 3
+			float velocityAngle 360
+			float velocityBegin 250
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.566 0
+		}
+	}
+	subscript CHARACTER_FLOOR_TRACE
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1.5
+			vector4 colorEnd 0.502 1 1 1.5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 50
+			int facing 3
+			float fadeIn 0.05
+			float fadeOut 0.05
+			bool globalSpace true
+			float lifeTimeMax 0.23
+			float lifeTimeMin 0.23
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 23
+			float particleSizeEnd 23
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.573 -4.895e-06 -3.14
+		}
+	}
+	subscript CHARACTER_JUMP
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.3
+			int numParticles 8
+			int orientation 1
+			float orientationSpeedMax -12.5
+			float orientationSpeedMin -10.5
+			float particleSizeBegin 20
+			float particleSizeEnd 12
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.288e-05 -3.138
+		}
+	}
+	subscript CHARACTER_RING
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 1.5
+			float lifeTimeMin 1
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax -4.5
+			float orientationSpeedMin -2.5
+			float particleSizeBegin 30
+			float particleSizeEnd 30
+			float particleSizeRange 0
+			vector3 position -1.512 -2.847 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.569 0
+		}
+	}
+	subscript CHARACTER_SHIELD
+	{
+		string renderer Default
+		string texture Sprites\char_shield.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.502 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 1.5
+			float lifeTimeMin 0.4
+			int numParticles 10
+			int orientation 1
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -5.5
+			float particleSizeBegin 55
+			float particleSizeEnd 55
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.568 0
+		}
+	}
+	subscript CHARACTER_SUPER
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.4745 1 1 1
+			vector4 colorEnd 0.1843 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 8
+			int orientation 1
+			float orientationSpeedMax -12.5
+			float orientationSpeedMin -10.5
+			float particleSizeBegin 22
+			float particleSizeEnd 22
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.288e-05 -3.138
+		}
+	}
+	subscript CHARACTER_SUPER_BLACK
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/character_particles _black.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.4745 1 1 1
+			vector4 colorEnd 0.1843 1 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 8
+			int orientation 1
+			float orientationSpeedMax -12.5
+			float orientationSpeedMin -10.5
+			float particleSizeBegin 22
+			float particleSizeEnd 22
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -1.288e-05 -3.138
+		}
+	}
+	subscript CHARACTER_TRACE
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.502 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			vector3 emitterBoxMax 20 4 4
+			vector3 emitterBoxMin -20 -4 -4
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 5
+			float particleSizeEnd 4
+			float particleSizeRange 0.3
+			vector3 position 0 0 0
+			int sequence 2
+			float velocityAngle 0
+			float velocityBegin 1
+			float velocityEnd 0
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -1.571 -5.96e-08 1.567
+		}
+	}
+	subscript CHARACTER_TRACE2
+	{
+		string renderer Default
+		string texture Sprites\character_particles.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			vector3 emitterBoxMax 4 4 20
+			vector3 emitterBoxMin -4 -4 -20
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -2.5
+			float particleSizeBegin 10
+			float particleSizeEnd 2
+			float particleSizeRange 0.3
+			vector3 position 0 16 0
+			int sequence 2
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 3
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0001178 -1.561 -0.0001256
+		}
+	}
+	subscript CHARACTER_TRACE_FLOOR
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\char_trace.png
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			bool clipping false
+			vector4 colorBegin 0.502 1 1 1
+			vector4 colorEnd 0.502 1 1 1
+			float emitDuration 0
+			float emitRate 60
+			float fadeIn 0.1
+			float fadeOut 0.1
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 35
+			float particleSizeBegin 200
+			float particleSizeEnd 250
+			vector3 position 0 0 0
+			vector3 size 0 0 0
+			float speedMax 10
+			float speedMin 0
+			float velocityAngle 0.5
+			vector3 yawPitchRoll -1.57 -0.3491 1.568
+		}
+	}
+	subscript CHAR_COMB_FIELD
+	{
+		string renderer Distort
+		string texture Sprites/char_comb_field.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 10
+			float distortionMin 10
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 4
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 0.6
+			float lifeTimeMin 0.5
+			int numParticles 8
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 5
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 -1.571 -3.142
+		}
+	}
+	subscript CHAR_DEATH
+	{
+		string renderer Distort
+		string texture Sprites/char_death.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 20
+			float distortionMin 20
+			bool dynamicBBox true
+			bool emitAllParticlesOnce true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 20
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace true
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 2
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 200
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 90
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0005926 -1.571 -0
+		}
+	}
+	subscript CHAR_DISTORT_TRACE
+	{
+		string renderer Distort
+		string texture Sprites/char_dist_trace.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.6524 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 10
+			float distortionMin 7
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 -1.571 3.142
+		}
+	}
+	subscript CHAR_DIST_ENERGY
+	{
+		bool loadFromTemplate true
+		string renderer Distort
+		string texture Sprites/char_dist_trace.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.4045 0.9323 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 10
+			float distortionMin 7
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 9
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 50
+			float particleSizeEnd 120
+			float particleSizeRange 0
+			vector3 position 53.44 -35.3 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0005916 -1.571 0
+		}
+	}
+	subscript CHAR_DIST_FIELD
+	{
+		string renderer Distort
+		string texture Sprites/char_dist_field.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.6524 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 12
+			float distortionMin 8
+			bool dynamicBBox true
+			bool emitAllParticlesOnce true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 20
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 2
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 90
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0005921 -1.571 0
+		}
+	}
+	subscript CHAR_DIST_PARTICLES
+	{
+		string renderer Default
+		string texture Sprites/char_dist_particles.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			vector3 emitterBoxMax 20 10 10
+			vector3 emitterBoxMin -20 -10 -10
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 1.5
+			float lifeTimeMin 1
+			int numParticles 50
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 5
+			float particleSizeEnd 5
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.571 0
+		}
+	}
+	subscript CHAR_DIST_SUPER_TRACE
+	{
+		string renderer Distort
+		string texture Sprites/char_trace_super.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.6524 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 12
+			float distortionMin 8
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 30
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 -1.571 3.142
+		}
+	}
+	subscript CHAR_DIST_TRACE
+	{
+		string renderer Distort
+		string texture Sprites/char_dist_trace.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.6524 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 10
+			float distortionMin 7
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 5
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0005926 -1.571 -0
+		}
+	}
+	subscript CHAR_ENERGY_CORE
+	{
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.302 0 1
+			vector4 colorEnd 1 0.502 0 3
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 370
+			float particleSizeEnd 150
+			float particleSizeRange 0.15
+			vector3 position 0 304 16.33
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.566 0
+		}
+	}
+	subscript CHAR_JUMP_FIELD
+	{
+		string renderer Distort
+		string texture Sprites/char_jump_field.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.6524 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 12
+			float distortionMin 8
+			bool dynamicBBox true
+			bool emitAllParticlesOnce true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 20
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 0.7
+			float lifeTimeMin 0.6
+			int numParticles 2
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 30
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 -1.571 3.142
+		}
+	}
+	subscript CHAR_SPAWN
+	{
+		string renderer Distort
+		string texture Sprites/char_spawn.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 2
+			vector4 colorEnd 1 1 1 0
+			float distortionMax 20
+			float distortionMin 20
+			bool dynamicBBox true
+			bool emitAllParticlesOnce true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 20
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace true
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.5
+			int numParticles 2
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 20
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 -10
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 90
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 -1.571 3.142
+		}
+	}
+	subscript DUST_01
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites/dust.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.006041 0.548 1 1
+			vector4 colorEnd 0.03561 0.5605 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 292 52 116
+			vector3 emitterBoxMin -324 -52 -100
+			int facing 3
+			float fadeIn 0.5
+			float fadeOut 0.5
+			bool globalSpace true
+			float lifeTimeMax 2.3
+			float lifeTimeMin 1
+			int numParticles 40
+			int orientation 1
+			float orientationSpeedMax 1
+			float orientationSpeedMin -1
+			float particleSizeBegin 6
+			float particleSizeEnd 6
+			float particleSizeRange 0.2
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 10
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.568 0
+		}
+	}
+	subscript DUST_BLUE_01
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.142 0.259 1 0.2
+			vector4 colorEnd 0.09627 0.1669 1 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			vector3 emitterBoxMax 300 200 250
+			vector3 emitterBoxMin -300 -200 -250
+			int facing 3
+			float fadeIn 0.5
+			float fadeOut 0.5
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 2
+			int numParticles 35
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 15
+			float velocityEnd 35
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -4.701e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_BLUE_02
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 190.5 -216.2 204.5
+			vector3 bboxMin -203.4 234.5 -203.6
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0 0.325 1 0.4
+			vector4 colorEnd 5.077e-06 0.1604 1 0.3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 2.5
+			vector3 emitterBoxMax 25 55 25
+			vector3 emitterBoxMin -25 -55 -25
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 2.5
+			float lifeTimeMin 2
+			int numParticles 6
+			int orientation 1
+			float orientationSpeedMax 0.2
+			float orientationSpeedMin -0.2
+			float particleSizeBegin 100
+			float particleSizeEnd 180
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 3
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_BLUE_03
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX true
+			bool alignScreenY true
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.142 0.259 1 0.2
+			vector4 colorEnd 0.09627 0.1669 1 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			vector3 emitterBoxMax 442.3 200 310.7
+			vector3 emitterBoxMin -442.3 -200 -310.7
+			int facing 3
+			float fadeIn 0.5
+			float fadeOut 0.5
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 2
+			int numParticles 35
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 15
+			float velocityEnd 35
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -4.701e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_GREEN_01
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.2388 1 0.142 0.1
+			vector4 colorEnd 0.1275 1 0.1193 0.1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 200 130 120
+			vector3 emitterBoxMin -200 -130 -120
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 3
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 35
+			float velocityBegin 5
+			float velocityEnd 15
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 2
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_GREEN_02
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 192.2 -219.7 196.4
+			vector3 bboxMin -200.4 228.4 -207.9
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.01188 1 0.0008047 0.2
+			vector4 colorEnd 0.007751 1 0.001202 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 2.5
+			vector3 emitterBoxMax 25 55 25
+			vector3 emitterBoxMin -25 -55 -25
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 2.5
+			float lifeTimeMin 2
+			int numParticles 6
+			int orientation 1
+			float orientationSpeedMax 0.2
+			float orientationSpeedMin -0.2
+			float particleSizeBegin 100
+			float particleSizeEnd 180
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 3
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_GREEN_02_CHAPTER3
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 283.3 -274.1 275
+			vector3 bboxMin -286.7 287.9 -288.5
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.01188 1 0.0008047 0.4
+			vector4 colorEnd 0.007751 1 0.001202 0.4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 2.5
+			vector3 emitterBoxMax 25 55 25
+			vector3 emitterBoxMin -25 -55 -25
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 2.5
+			float lifeTimeMin 2
+			int numParticles 6
+			int orientation 1
+			float orientationSpeedMax 0.2
+			float orientationSpeedMin -0.2
+			float particleSizeBegin 100
+			float particleSizeEnd 180
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 3
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_ORANGE_01
+	{
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 1 0.3587 0.1193 0.2
+			vector4 colorEnd 1 0.4045 0.122 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 200 130 120
+			vector3 emitterBoxMin -200 -130 -120
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 3
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 35
+			float velocityBegin 5
+			float velocityEnd 15
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 2
+			vector3 yawPitchRoll -4.697e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_ORANGE_02
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 204.9 -232.3 196.8
+			vector3 bboxMin -171.8 165.8 -204.6
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 1 0.2508 0 0.4
+			vector4 colorEnd 1 0.2716 2.333e-05 0.3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 2.5
+			vector3 emitterBoxMax 25 55 25
+			vector3 emitterBoxMin -25 -55 -25
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 2.5
+			float lifeTimeMin 2
+			int numParticles 6
+			int orientation 1
+			float orientationSpeedMax 0.2
+			float orientationSpeedMin -0.2
+			float particleSizeBegin 100
+			float particleSizeEnd 180
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 3
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_RED_01
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 1 0.06381 0.007751 0.2
+			vector4 colorEnd 1 0.07383 0.01188 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 200 130 120
+			vector3 emitterBoxMin -200 -130 -120
+			int facing 3
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 3
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 35
+			float velocityBegin 5
+			float velocityEnd 15
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 2
+			vector3 yawPitchRoll -4.695e-05 -1.57 -0.0003453
+		}
+	}
+	subscript DUST_SCENE_01
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 649.5 -453.5 519.5
+			vector3 bboxMin -606.4 434.9 -481.3
+			float blendMode 0.75
+			bool clipping true
+			vector4 colorBegin 0.194 0.4762 1 0.1
+			vector4 colorEnd 0.145 0.482 1 0.1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			vector3 emitterBoxMax 200 200 170
+			vector3 emitterBoxMin -200 -200 -170
+			int facing 3
+			float fadeIn 0.5
+			float fadeOut 0.5
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 2
+			int numParticles 35
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 15
+			float velocityEnd 35
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -4.7e-05 -1.57 -0.0003453
+		}
+	}
+	subscript ENERGY_CORE
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.302 0 1
+			vector4 colorEnd 1 0.502 0 3
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 370
+			float particleSizeEnd 150
+			float particleSizeRange 0.15
+			vector3 position 0 304 16.33
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_CORE_BLUE
+	{
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 0 0.3889 1 1
+			vector4 colorEnd 0 0.3889 1 3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 370
+			float particleSizeEnd 150
+			float particleSizeRange 0.15
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_CORE_BLUE_SMALL
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 0 0.3889 1 4
+			vector4 colorEnd 0 0.3889 1 4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 150
+			float particleSizeEnd 70
+			float particleSizeRange 0.15
+			vector3 position -48 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_CORE_BLUE_SMALL2
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 0 0.3889 1 4
+			vector4 colorEnd 0 0.3889 1 4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 150
+			float particleSizeEnd 70
+			float particleSizeRange 0.15
+			vector3 position -48 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_CORE_ORANGE
+	{
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.302 0 1
+			vector4 colorEnd 1 0.502 0 3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 370
+			float particleSizeEnd 150
+			float particleSizeRange 0.15
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_CORE_SMALL
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\energyCore.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 0.0002615 0.3993 1 1
+			vector4 colorEnd 0.2195 0.7299 1 3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 270
+			float particleSizeEnd 100
+			float particleSizeRange 0.15
+			vector3 position -80 0 16.33
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_GATHER
+	{
+		bool loadFromTemplate false
+		string renderer Default
+		string texture Sprites/energyGather.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 0.06003 0.7372 1 5
+			vector4 colorEnd 2.333e-05 0.4368 1 2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 55
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.2
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 120
+			float particleSizeEnd 60
+			float particleSizeRange 0.15
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_GATHER_BIG
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/energyGather.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.2716 0.04943 5
+			vector4 colorEnd 1 0.1542 0.0001751 2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 55
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace true
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.2
+			int numParticles 30
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 170
+			float particleSizeEnd 120
+			float particleSizeRange 0.15
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled true
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.567 0
+		}
+	}
+	subscript ENERGY_STREAM
+	{
+		string renderer Default
+		string texture Sprites\particle_test_01.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.502 0.251 1
+			vector4 colorEnd 1 0.502 0.251 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 8
+			vector3 emitterBoxMax 4 4 100
+			vector3 emitterBoxMin -4 -4 -100
+			int facing 1
+			float fadeIn 0.4
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1.9
+			float lifeTimeMin 1.6
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 140
+			float particleSizeEnd 140
+			float particleSizeRange 0
+			vector3 position -16 176 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.568 0
+		}
+	}
+	subscript ENERGY_STREAM_BIG_BLUE
+	{
+		string renderer Default
+		string texture Sprites\particle_test_01.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.7
+			bool clipping true
+			vector4 colorBegin 0.1098 0.6667 1 1
+			vector4 colorEnd 0 0.502 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 8
+			vector3 emitterBoxMax 36 52 1044
+			vector3 emitterBoxMin -36 -52 -100
+			int facing 1
+			float fadeIn 0.4
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1.9
+			float lifeTimeMin 1.6
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin 0.5
+			float particleSizeBegin 340
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position -16 256 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 150
+			float velocityEnd 190
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.566 0
+		}
+	}
+	subscript ENERGY_STREAM_BLUE
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\energyStream.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.05098 0.5725 1 1
+			vector4 colorEnd 0 0 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 8
+			vector3 emitterBoxMax 4 4 52
+			vector3 emitterBoxMin -4 -4 -52
+			int facing 1
+			float fadeIn 0.4
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1.9
+			float lifeTimeMin 1.6
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 240
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position 0 218 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 10
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.141 -1.564 -3.141
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.05882 0.5294 1 1
+			vector4 colorEnd 0.251 0 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 150
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.2
+			int numParticles 50
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 110
+			float particleSizeEnd 440
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 110
+			float velocityBegin 50
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -2.141e-09 -1.564 0.0003453
+		}
+	}
+	subscript ENERGY_STREAM_ORANGE
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\energyStream.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.1604 0.05284 1
+			vector4 colorEnd 1 0.004116 0.004116 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 8
+			vector3 emitterBoxMax 4 4 52
+			vector3 emitterBoxMin -4 -4 -52
+			int facing 1
+			float fadeIn 0.4
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 1.9
+			float lifeTimeMin 1.6
+			int numParticles 25
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 240
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position 0 178 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 10
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.141 -1.564 3.142
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.231 0.06381 1
+			vector4 colorEnd 1 0.02201 0.01518 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 150
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.2
+			int numParticles 50
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 110
+			float particleSizeEnd 440
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 110
+			float velocityBegin 50
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -2.141e-09 -1.564 0.0003453
+		}
+	}
+	subscript ENERGY_WHIRL
+	{
+		string renderer Default
+		string texture Sprites\energyCoreBig.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.502 0 1
+			vector4 colorEnd 1 0.502 0 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 1.3
+			int facing 2
+			float fadeIn 1.3
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 2
+			float lifeTimeMin 2
+			int numParticles 5
+			int orientation 1
+			float orientationSpeedMax -0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 140
+			float particleSizeEnd 150
+			float particleSizeRange 0
+			vector3 position 0 90 0
+			int sequence 0
+			float velocityAngle 90
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -2.757e-06 3.142
+		}
+	}
+	subscript ENERGY_WHIRL_2
+	{
+		string renderer Default
+		string texture Sprites\energyCoreBig.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.1
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 1.4
+			int facing 2
+			float fadeIn 1.6
+			float fadeOut 0.4
+			bool globalSpace true
+			float lifeTimeMax 2
+			float lifeTimeMin 2
+			int numParticles 11
+			int orientation 1
+			float orientationSpeedMax -0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 120
+			float particleSizeEnd 50
+			float particleSizeRange 0
+			vector3 position 0 96 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 0
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.142 -0 3.142
+		}
+	}
+	subscript EXPLOSION
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\explosion.mtrl
+		subscript Affectors
+		{
+			string VelocityRotator VelocityRotator
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 0.502 1
+			vector4 colorEnd 1 0.502 0.251 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0.1
+			float emitRate 500
+			float fadeIn 0.05
+			float fadeOut 0.15
+			bool globalSpace true
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 20
+			float particleSizeBegin 10
+			float particleSizeEnd 70
+			float particleSizeRange 0.5
+			vector3 position -16 -64 0
+			float radius 20.82
+			int sequence 1
+			float velocityAngle 360
+			bool velocityFromCenter false
+			float velocityMax 130
+			float velocityMin 90
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.561 0
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.349 0.2353 1
+			vector4 colorEnd 1 0.502 0.251 1
+			bool dynamicBBox true
+			float emitDelay 0.2
+			float emitDuration 0.3
+			float emitRate 700
+			float fadeIn 0.1
+			float fadeOut 0.3
+			bool globalSpace true
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 50
+			float particleSizeBegin 30
+			float particleSizeEnd 60
+			float particleSizeRange 0.35
+			vector3 position -16 -64 0
+			float radius 27.77
+			int sequence 0
+			float velocityAngle 360
+			bool velocityFromCenter true
+			float velocityMax 150
+			float velocityMin 110
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.561 0
+		}
+		subscript Emitter#2
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.6863 0.04706 0.01176 1
+			vector4 colorEnd 0.4902 0.349 0.2431 1
+			bool dynamicBBox true
+			float emitDelay 0.2
+			float emitDuration 0.3
+			float emitRate 155
+			float fadeIn 0.1
+			float fadeOut 0.7
+			bool globalSpace true
+			float lifeTimeMax 1.3
+			float lifeTimeMin 1
+			int numParticles 15
+			float particleSizeBegin 20
+			float particleSizeEnd 40
+			float particleSizeRange 0.4
+			vector3 position -16 -64 0
+			float radius 90.48
+			int sequence 2
+			float velocityAngle 360
+			bool velocityFromCenter false
+			float velocityMax 10
+			float velocityMin 6
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.565 0
+		}
+		subscript Emitter#3
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.1059 0.1059 0.1059 1
+			vector4 colorEnd 0.1216 0.1216 0.1216 1
+			bool dynamicBBox true
+			float emitDelay 0.4
+			float emitDuration 0.2
+			float emitRate 500
+			float fadeIn 0.3
+			float fadeOut 0.7
+			bool globalSpace true
+			float lifeTimeMax 1.6
+			float lifeTimeMin 1
+			int numParticles 25
+			float particleSizeBegin 40
+			float particleSizeEnd 70
+			float particleSizeRange 0.25
+			vector3 position -16 -64 -4.171
+			float radius 85.77
+			int sequence 0
+			float velocityAngle 360
+			bool velocityFromCenter false
+			float velocityMax 10
+			float velocityMin 5
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.565 0
+		}
+	}
+	subscript EXPLOSION_T1
+	{
+		bool autoScale true
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\explosion.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.502 0 4
+			vector4 colorEnd 1 0.502 0.251 4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0.2
+			float emitRate 580
+			int facing 1
+			float fadeIn 0.05
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 40
+			float particleSizeRange 0.35
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 850
+			float velocityEnd 100
+			float velocityExp 2
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.562 0.0004883
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 0.502 1
+			vector4 colorEnd 1 0 0 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0.2
+			float emitDuration 0.15
+			float emitRate 2000
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.3
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 3
+			int orientation 2
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 5
+			float particleSizeEnd 160
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 3
+			bool startDisabled false
+			float velocityAngle 180
+			float velocityBegin 0
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.564 0.0003453
+		}
+		subscript Emitter#2
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 0.502 1
+			vector4 colorEnd 1 0.502 0.251 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0.2
+			float emitRate 200
+			int facing 1
+			float fadeIn 0.05
+			float fadeOut 0.15
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 20
+			int orientation 2
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 160
+			float particleSizeRange 0.5
+			vector3 position 0 0 0
+			float radius 20.82
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.559 0.0006905
+		}
+		subscript Emitter#3
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.1569 0.1569 0.1569 0.8
+			vector4 colorEnd 0.1216 0.1216 0.1216 0.9
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0.2
+			float emitDuration 0.2
+			float emitRate 500
+			int facing 3
+			float fadeIn 0.3
+			float fadeOut 0.6
+			bool globalSpace false
+			float lifeTimeMax 2.4
+			float lifeTimeMin 1.8
+			int numParticles 10
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin -1.5
+			float particleSizeBegin 40
+			float particleSizeEnd 150
+			float particleSizeRange 0.25
+			vector3 position 0 0 -4.171
+			float radius 27.39
+			int sequence 2
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 50
+			float velocityEnd 5
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.3
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.561 0.0004883
+		}
+	}
+	subscript EXPLOSION_T2
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\explosion.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 2.333e-05 0.2388 1 4
+			vector4 colorEnd 0.2084 0.6524 1 4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0.2
+			float emitRate 580
+			int facing 1
+			float fadeIn 0.05
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 40
+			float particleSizeRange 0.35
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 850
+			float velocityEnd 100
+			float velocityExp 2
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.562 0.0004883
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.4368 0.8832 1 1
+			vector4 colorEnd 2.333e-05 0.1636 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0.2
+			float emitDuration 0.15
+			float emitRate 2000
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.3
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.3
+			int numParticles 3
+			int orientation 2
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 5
+			float particleSizeEnd 160
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 3
+			bool startDisabled false
+			float velocityAngle 180
+			float velocityBegin 0
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -2.141e-09 -1.564 0.0003453
+		}
+		subscript Emitter#2
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.4591 0.8592 1 1
+			vector4 colorEnd 0.231 0.6388 1 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0.2
+			float emitRate 200
+			int facing 1
+			float fadeIn 0.05
+			float fadeOut 0.15
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 20
+			int orientation 2
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 10
+			float particleSizeEnd 160
+			float particleSizeRange 0.5
+			vector3 position 0 0 0
+			float radius 20.82
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 20
+			float velocityEnd 40
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 2.467e-09 -1.559 0.0006905
+		}
+		subscript Emitter#3
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.1569 0.1569 0.1569 0.8
+			vector4 colorEnd 0.1216 0.1216 0.1216 0.9
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0.2
+			float emitDuration 0.2
+			float emitRate 500
+			int facing 3
+			float fadeIn 0.3
+			float fadeOut 0.6
+			bool globalSpace false
+			float lifeTimeMax 2.4
+			float lifeTimeMin 1.8
+			int numParticles 10
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin -1.5
+			float particleSizeBegin 40
+			float particleSizeEnd 150
+			float particleSizeRange 0.25
+			vector3 position 0 0 -4.171
+			float radius 27.39
+			int sequence 2
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 50
+			float velocityEnd 5
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.3
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.561 0.0004883
+		}
+	}
+	subscript Emitter#0
+	{
+		int EmitterEntityId 14
+		float accelerationMax 0
+		float accelerationMin 0
+		int animSequence 0
+		float blendMode 1
+		bool clipping true
+		vector4 colorBegin 0.502 1 1 1
+		vector4 colorEnd 0 0.502 1 1
+		bool dynamicBBox true
+		float emitDelay 0
+		float emitDuration 0
+		float emitRate 35
+		float fadeIn 0.1
+		float fadeOut 0.1
+		bool globalSpace false
+		float lifeTimeMax 0.9
+		float lifeTimeMin 0.7
+		int numParticles 30
+		int orientation 1
+		float orientationSpeed 5
+		float particleSizeBegin 35
+		float particleSizeEnd 35
+		float particleSizeRange 0.1
+		vector3 position 0 0 0
+		int sequence 0
+		float velocityAngle 10
+		float velocityBegin 250
+		float velocityEnd 200
+		float velocityExp 1
+		bool velocityFromCenter false
+		float velocityRange 0.1
+		float warmUpTime 0
+		vector3 yawPitchRoll 0 -1.565 0
+	}
+	subscript FIREBALL
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\fire.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDuration 0
+			float emitRate 10
+			float fadeIn 0.4
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 1.6
+			float lifeTimeMin 1.2
+			int numParticles 20
+			float particleSizeBegin 300
+			float particleSizeEnd 400
+			vector3 position 0 0 0
+			vector3 size 0 0 0
+			float speedMax 15
+			float speedMin 15
+			float velocityAngle 6.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -3.142 -1.01e-10 1.571
+		}
+	}
+	subscript FIREBALL_BIG
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\fire.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDuration 0
+			float emitRate 10
+			float fadeIn 0.6
+			float fadeOut 0.3
+			bool globalSpace false
+			float lifeTimeMax 1.6
+			float lifeTimeMin 1.2
+			int numParticles 15
+			float particleSizeBegin 1500
+			float particleSizeEnd 1800
+			vector3 position 0 0 0
+			vector3 size 0 0 0
+			float speedMax 40
+			float speedMin 30
+			float velocityAngle 6.2
+			float warmUpTime 1
+			vector3 yawPitchRoll -3.142 -1.01e-10 1.571
+		}
+	}
+	subscript FOG
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX true
+			bool alignScreenY true
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.5
+			vector4 colorEnd 1 1 1 0.5
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			vector3 emitterBoxMax 425.6 400 1123
+			vector3 emitterBoxMin -447.2 -200 509.6
+			int facing 3
+			float fadeIn 0.6
+			float fadeOut 0.7
+			bool globalSpace true
+			float lifeTimeMax 4
+			float lifeTimeMin 2.9
+			int numParticles 15
+			int orientation 1
+			float orientationSpeedMax 0.6
+			float orientationSpeedMin -0.6
+			float particleSizeBegin 240
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position 10.82 -1172 -240
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 155
+			float velocityEnd 175
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0001152 -1.57 0.0003453
+		}
+	}
+	subscript FOG_01
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector4 colorBegin 0.2118 0.2118 0.2118 0.3
+			vector4 colorEnd 0.2275 0.2275 0.2275 0.4
+			float emitDuration 0
+			float emitRate 25
+			float fadeIn 0.6
+			float fadeOut 0.6
+			float lifeTimeMax 5.5
+			float lifeTimeMin 4.5
+			int numParticles 100
+			float particleSizeBegin 1500
+			float particleSizeEnd 2000
+			vector3 position 80 0 0
+			vector3 size 150 150 150
+			float speedMax 20
+			float speedMin 2
+			float velocityAngle 3.79
+			vector3 yawPitchRoll -1.571 8.941e-08 1.569
+		}
+	}
+	subscript FOG_02
+	{
+		string renderer Default
+		string texture Sprites/fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.01431 1 0.2195 0.1
+			vector4 colorEnd 0.009021 1 0.4647 0.1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 100 100 100
+			vector3 emitterBoxMin -100 -100 -100
+			int facing 1
+			float fadeIn 0.8
+			float fadeOut 0.7
+			bool globalSpace false
+			float lifeTimeMax 1.9
+			float lifeTimeMin 1.6
+			int numParticles 20
+			int orientation 0
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 45
+			float particleSizeEnd 65
+			float particleSizeRange 0
+			vector3 position 57.92 11.88 81.83
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 15
+			float velocityEnd 25
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.1216 -1.571 -0.1216
+		}
+	}
+	subscript FOG_LARGE_01
+	{
+		string renderer Default
+		string texture Sprites/fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector3 bboxMax 102.3 110.1 -119.7
+			vector3 bboxMin -111.1 -102 100.2
+			float blendMode 0.4
+			bool clipping true
+			vector4 colorBegin 0.002263 0.3204 0.05819 0.1
+			vector4 colorEnd 0.002932 0.1835 0.03561 0.1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 220 30 60
+			vector3 emitterBoxMin -220 -30 -60
+			int facing 3
+			float fadeIn 1.5
+			float fadeOut 1.5
+			bool globalSpace false
+			float lifeTimeMax 4
+			float lifeTimeMin 3
+			int numParticles 30
+			int orientation 1
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 110
+			float particleSizeEnd 150
+			float particleSizeRange 0.2
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 80
+			float velocityBegin 45
+			float velocityEnd 80
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.089 -1.571 0.05298
+		}
+	}
+	subscript FOG_LARGE_02
+	{
+		string renderer Default
+		string texture Sprites/fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			vector3 bboxMax -426.5 271.6 384.8
+			vector3 bboxMin 445.2 -268.1 -155.4
+			float blendMode 0.4
+			bool clipping true
+			vector4 colorBegin 0.002263 0.3204 0.05819 0.3
+			vector4 colorEnd 0.002932 0.1835 0.03561 0.3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 7
+			vector3 emitterBoxMax 250 30 60
+			vector3 emitterBoxMin -250 -30 -60
+			int facing 3
+			float fadeIn 1.5
+			float fadeOut 1.5
+			bool globalSpace false
+			float lifeTimeMax 4
+			float lifeTimeMin 3
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 110
+			float particleSizeEnd 150
+			float particleSizeRange 0.2
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 80
+			float velocityBegin 45
+			float velocityEnd 80
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -0.05158 -1.571 -3.09
+		}
+	}
+	subscript FOG_WORLD
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX false
+			bool alignScreenY false
+			int animSequence 0
+			vector3 bboxMax 947.1 -866.3 900.6
+			vector3 bboxMin -1131 995.2 -791.1
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.5
+			vector4 colorEnd 1 1 1 0.5
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox false
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			vector3 emitterBoxMax 450 250 350
+			vector3 emitterBoxMin -450 -250 -350
+			int facing 3
+			float fadeIn 0.6
+			float fadeOut 0.7
+			bool globalSpace true
+			float lifeTimeMax 4
+			float lifeTimeMin 2.9
+			int numParticles 15
+			int orientation 1
+			float orientationSpeedMax 0.6
+			float orientationSpeedMin -0.6
+			float particleSizeBegin 240
+			float particleSizeEnd 300
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 55
+			float velocityEnd 115
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0001152 -1.57 0.0003453
+		}
+	}
+	subscript HUNTER_CORE
+	{
+		string renderer Default
+		string texture Sprites\hunter_core.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 1 0.502 0 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 5
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin 1.5
+			float particleSizeBegin 10
+			float particleSizeEnd 20
+			float particleSizeRange 0
+			vector3 position 0 0 -2.663
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 1.56 9.496e-05
+		}
+	}
+	subscript HUNTER_CORE2
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites\hunter_core.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 0.01266 0.5174 1 1.4
+			vector4 colorEnd 5.077e-06 0.2888 1 1.4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 5
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin 1.5
+			float particleSizeBegin 10
+			float particleSizeEnd 20
+			float particleSizeRange 0
+			vector3 position 0 0 -2.663
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.141 1.56 0
+		}
+	}
+	subscript LASER_HITPOINT
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/explosion.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.5295 0 1.5
+			vector4 colorEnd 1 0.04778 0 1.5
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			int facing 3
+			float fadeIn 0.05
+			float fadeOut 0.05
+			bool globalSpace false
+			float lifeTimeMax 0.3
+			float lifeTimeMin 0.2
+			int numParticles 5
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 5
+			float particleSizeEnd 25
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 30
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.142 -1.571 3.142
+		}
+	}
+	subscript LIGHT_DUST_01
+	{
+		string renderer Default
+		string texture Sprites/smoke.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.09388 0.6661 0.6661 2
+			vector4 colorEnd 0.02095 0.3537 0.548 2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 40 70 50
+			vector3 emitterBoxMin -40 -70 -50
+			int facing 3
+			float fadeIn 1.5
+			float fadeOut 1.5
+			bool globalSpace false
+			float lifeTimeMax 5
+			float lifeTimeMin 4
+			int numParticles 20
+			int orientation 0
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 1
+			float particleSizeEnd 1
+			float particleSizeRange 0.5
+			vector3 position 0 -2.034 16.29
+			int sequence 1
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 1.571 0
+		}
+	}
+	subscript LIGHT_DUST_02
+	{
+		string renderer Default
+		string texture Sprites/fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 2.333e-05 0.2349 0.6661 0.2
+			vector4 colorEnd 0.0003671 0.2233 0.548 0.2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 40 30 40
+			vector3 emitterBoxMin -40 -30 -40
+			int facing 3
+			float fadeIn 1.5
+			float fadeOut 1.5
+			bool globalSpace false
+			float lifeTimeMax 5
+			float lifeTimeMin 4
+			int numParticles 20
+			int orientation 1
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 40
+			float particleSizeEnd 55
+			float particleSizeRange 0.2
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 3
+			float velocityEnd 7
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 1.571 0
+		}
+	}
+	subscript MIST
+	{
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.142 0.259 1 0.3
+			vector4 colorEnd 0.09627 0.1669 1 0.3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 15
+			vector3 emitterBoxMax 340 100 404
+			vector3 emitterBoxMin -356 -100 -244
+			int facing 3
+			float fadeIn 0.5
+			float fadeOut 0.5
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 2
+			int numParticles 45
+			int orientation 1
+			float orientationSpeedMax 0.9
+			float orientationSpeedMin -0.7
+			float particleSizeBegin 140
+			float particleSizeEnd 240
+			float particleSizeRange 0
+			vector3 position 0 0 -317.9
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 15
+			float velocityEnd 35
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 1.571 0 -1.57
+		}
+	}
+	subscript PLANET_RING
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/planet_ring.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 0.0009924 0.687 1 0.3
+			vector4 colorEnd 0.001963 1 1 0.3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 0.3
+			int facing 2
+			float fadeIn 1
+			float fadeOut 1
+			bool globalSpace false
+			float lifeTimeMax 5
+			float lifeTimeMin 5
+			int numParticles 4
+			int orientation 1
+			float orientationSpeedMax 2
+			float orientationSpeedMin 1
+			float particleSizeBegin 940
+			float particleSizeEnd 940
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 0
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 3
+			vector3 yawPitchRoll 0.0004076 -1.571 0
+		}
+	}
+	subscript SAWBLADE_CORE
+	{
+		string renderer Default
+		string texture Sprites\hunter_core.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 0 0.502 1 1
+			vector4 colorEnd 0 0.502 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 5
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin 1.5
+			float particleSizeBegin 10
+			float particleSizeEnd 20
+			float particleSizeRange 0
+			vector3 position 0 0 -2.663
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 1.56 9.495e-05
+		}
+	}
+	subscript SMOKE
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\smoke.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 1
+			vector4 colorEnd 1 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			float fadeIn 0.2
+			float fadeOut 0.3
+			bool globalSpace true
+			float lifeTimeMax 1.5
+			float lifeTimeMin 1
+			int numParticles 50
+			float particleSizeBegin 40
+			float particleSizeEnd 40
+			float particleSizeRange 0
+			vector3 position 0 96 0
+			int sequence 0
+			float velocityAngle 90
+			bool velocityFromCenter false
+			float velocityMax 40
+			float velocityMin 20
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.569 0
+		}
+	}
+	subscript SMOKE_01
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\smoke.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.01961 0.01176 0.01176 1
+			vector4 colorEnd 0 0 0 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 68 68 20
+			vector3 emitterBoxMin -68 -68 -20
+			float fadeIn 0.4
+			float fadeOut 1
+			bool globalSpace true
+			float lifeTimeMax 8.5
+			float lifeTimeMin 8
+			int numParticles 70
+			float particleSizeBegin 40
+			float particleSizeEnd 110
+			float particleSizeRange 0
+			vector3 position 0 46.85 0
+			int sequence 0
+			float velocityAngle 55
+			float velocityBegin 60
+			float velocityEnd 55
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.142 -0.003436 3.142
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 52
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.6
+			bool clipping true
+			vector4 colorBegin 0 0.502 1 1
+			vector4 colorEnd 0 0 0 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 9
+			float fadeIn 0.2
+			float fadeOut 0.8
+			bool globalSpace false
+			float lifeTimeMax 2.5
+			float lifeTimeMin 2
+			int numParticles 60
+			float particleSizeBegin 35
+			float particleSizeEnd 60
+			float particleSizeRange 0
+			vector3 position 20.73 48.69 -25.93
+			float radius 30.48
+			int sequence 1
+			float velocityAngle 25
+			float velocityBegin 100
+			float velocityEnd 70
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 -0.01197 -3.142
+		}
+	}
+	subscript SMOKE_02
+	{
+		string renderer Default
+		string texture Sprites/fog.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.007751 0.009021 0.007751 2
+			vector4 colorEnd 0.005028 0.006041 0.005522 2
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			vector3 emitterBoxMax 100 100 100
+			vector3 emitterBoxMin -100 -100 -100
+			int facing 3
+			float fadeIn 1.5
+			float fadeOut 1.5
+			bool globalSpace false
+			float lifeTimeMax 5
+			float lifeTimeMin 4
+			int numParticles 20
+			int orientation 0
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 65
+			float particleSizeEnd 80
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 10
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 1.571 0
+		}
+	}
+	subscript SMOKE_T1
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/explosion.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.03155 0.07383 0.1193 1
+			vector4 colorEnd 0.0104 0.05112 0.1247 1
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			int facing 1
+			float fadeIn 0.6
+			float fadeOut 0.8
+			bool globalSpace true
+			float lifeTimeMax 8.5
+			float lifeTimeMin 7
+			int numParticles 40
+			int orientation 1
+			float orientationSpeedMax 0.6
+			float orientationSpeedMin -0.6
+			float particleSizeBegin 120
+			float particleSizeEnd 170
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 2
+			bool startDisabled false
+			float velocityAngle 45
+			float velocityBegin 40
+			float velocityEnd 60
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 1
+			vector3 yawPitchRoll 3.142 -1.571 3.142
+		}
+	}
+	subscript SNOW
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.6
+			vector4 colorEnd 1 1 1 0.7
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 25
+			vector3 emitterBoxMax 516 100 164
+			vector3 emitterBoxMin -484 -100 -100
+			float fadeIn 0.3
+			float fadeOut 0.3
+			bool globalSpace true
+			float lifeTimeMax 1.4
+			float lifeTimeMin 1.3
+			int numParticles 50
+			int orientation 2
+			float orientationSpeed 0.5
+			float particleSizeBegin 50
+			float particleSizeEnd 45
+			float particleSizeRange 0.3
+			vector3 position 0 -32 0
+			int sequence 0
+			float velocityAngle 30
+			float velocityBegin 450
+			float velocityEnd 300
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.13 1.563 -0.01138
+		}
+	}
+	subscript SNOW_FOG
+	{
+		string renderer Default
+		string texture Sprites\snow.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX true
+			bool alignScreenY true
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.5
+			vector4 colorEnd 1 1 1 0.5
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			vector3 emitterBoxMax 974.1 400 1122
+			vector3 emitterBoxMin -995.7 -200 -261.2
+			int facing 3
+			float fadeIn 0.6
+			float fadeOut 0.7
+			bool globalSpace true
+			float lifeTimeMax 4
+			float lifeTimeMin 2.9
+			int numParticles 15
+			int orientation 1
+			float orientationSpeedMax 0.6
+			float orientationSpeedMin -0.6
+			float particleSizeBegin 240
+			float particleSizeEnd 340
+			float particleSizeRange 0
+			vector3 position 10.82 -1172 -240
+			int sequence 1
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 155
+			float velocityEnd 175
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.0001152 -1.57 0.0003453
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			bool alignScreenX true
+			bool alignScreenY false
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.6
+			vector4 colorEnd 1 1 1 0.7
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 35
+			vector3 emitterBoxMax -1098 400 164
+			vector3 emitterBoxMin 1095 -400 -100
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.3
+			bool globalSpace true
+			float lifeTimeMax 3.5
+			float lifeTimeMin 3
+			int numParticles 100
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin 0.5
+			float particleSizeBegin 50
+			float particleSizeEnd 45
+			float particleSizeRange 0.3
+			vector3 position -1.49 12.59 -50
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 50
+			float velocityBegin 650
+			float velocityEnd 500
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.13 1.562 -0.01137
+		}
+	}
+	subscript STREAMER_T1
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\stream_t1.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 0.01569 0.4588 1 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 45
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.6
+			float lifeTimeMin 0.5
+			int numParticles 30
+			int orientation 1
+			float orientationSpeed 5
+			float particleSizeBegin 30
+			float particleSizeEnd 30
+			float particleSizeRange 0.1
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 10
+			float velocityBegin 250
+			float velocityEnd 200
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.565 0
+		}
+	}
+	subscript STREAMER_T2
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\stream_t1.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 0 0.4157 0.8353 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 35
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.9
+			float lifeTimeMin 0.7
+			int numParticles 30
+			int orientation 1
+			float orientationSpeed 5
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0.1
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 10
+			float velocityBegin 250
+			float velocityEnd 200
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.565 0
+		}
+	}
+	subscript STREAM_T1
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\stream.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 1 0.502 0.251 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 45
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.6
+			float lifeTimeMin 0.5
+			int numParticles 30
+			int orientation 1
+			float orientationSpeed 5
+			float particleSizeBegin 30
+			float particleSizeEnd 20
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 10
+			float velocityBegin 250
+			float velocityEnd 200
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 1.564 9.541e-05
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.502 0.251 1
+			vector4 colorEnd 0.502 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0.3
+			float emitDuration 0
+			float emitRate 15
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 35
+			float particleSizeEnd 35
+			float particleSizeRange 0
+			vector3 position 0 -96 0
+			int sequence 1
+			float velocityAngle 25
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 1.567 9.145e-05
+		}
+	}
+	subscript STREAM_T2
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\stream.mtrl
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 1 0.502 0.251 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 45
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.8
+			float lifeTimeMin 0.7
+			int numParticles 35
+			int orientation 1
+			float orientationSpeed 5
+			float particleSizeBegin 50
+			float particleSizeEnd 25
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 10
+			float velocityBegin 250
+			float velocityEnd 200
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.142 1.563 9.526e-05
+		}
+		subscript Emitter#1
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 1
+			bool clipping true
+			vector4 colorBegin 1 0.502 0.251 1
+			vector4 colorEnd 0.502 1 1 1
+			bool dynamicBBox true
+			float emitDelay 0.3
+			float emitDuration 0
+			float emitRate 15
+			float fadeIn 0.1
+			float fadeOut 0.2
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 10
+			int orientation 1
+			float orientationSpeed 0.5
+			float particleSizeBegin 45
+			float particleSizeEnd 45
+			float particleSizeRange 0
+			vector3 position 0 -144 0
+			int sequence 1
+			float velocityAngle 25
+			float velocityBegin 120
+			float velocityEnd 140
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll -3.141 1.566 9.139e-05
+		}
+	}
+	subscript STREAM_T3
+	{
+		string renderer Default
+		string texture Sprites/beam0.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 53
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 1 0.6055 0.001202 5
+			vector4 colorEnd 1 0.2845 0.002263 5
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 45
+			vector3 emitterBoxMax 100 100 50
+			vector3 emitterBoxMin -100 -100 -50
+			int facing 1
+			float fadeIn 0.1
+			float fadeOut 0.05
+			bool globalSpace false
+			float lifeTimeMax 0.2
+			float lifeTimeMin 0.15
+			int numParticles 40
+			int orientation 1
+			float orientationSpeedMax 1
+			float orientationSpeedMin 0
+			float particleSizeBegin 20
+			float particleSizeEnd 25
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			float velocityAngle 0
+			float velocityBegin 100
+			float velocityEnd 120
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0.1216 -1.571 -0.1216
+		}
+	}
+	subscript TEST
+	{
+		string renderer Default
+		string texture Sprites\energyCoreBig.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 79
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0
+			bool clipping true
+			vector4 colorBegin 0.6353 0.8039 0.8667 1
+			vector4 colorEnd 0.2353 0.5255 0.7686 1
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 1.5
+			int facing 2
+			float fadeIn 0.6
+			float fadeOut 0.4
+			bool globalSpace false
+			float lifeTimeMax 2000
+			float lifeTimeMin 1002
+			int numParticles 1
+			int orientation 1
+			float orientationSpeedMax 0
+			float orientationSpeedMin 0
+			float particleSizeBegin 540
+			float particleSizeEnd 350
+			float particleSizeRange 0
+			vector3 position 0 24.69 0
+			int sequence 0
+			float velocityAngle 90
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 1.52 0
+		}
+	}
+	subscript WATCHER_EYE
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/watcher_eye.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.8
+			bool clipping true
+			vector4 colorBegin 1 0.1113 5.077e-06 1
+			vector4 colorEnd 1 0.1734 0 3
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.4
+			float lifeTimeMin 0.3
+			int numParticles 15
+			int orientation 0
+			float orientationSpeedMax 0.5
+			float orientationSpeedMin -0.5
+			float particleSizeBegin 120
+			float particleSizeEnd 150
+			float particleSizeRange 0
+			vector3 position 0 0 0
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 1
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.566 0
+		}
+	}
+	subscript WEAPON
+	{
+		bool loadFromTemplate true
+		string renderer Default
+		string texture Sprites/weapon.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 1 0 0 1
+			vector4 colorEnd 1 0.3066 0 1.4
+			float distortionMax 1
+			float distortionMin 0
+			bool dynamicBBox true
+			bool emitAllParticlesOnce false
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 10
+			int facing 3
+			float fadeIn 0.1
+			float fadeOut 0.1
+			bool globalSpace false
+			float lifeTimeMax 0.5
+			float lifeTimeMin 0.4
+			int numParticles 5
+			int orientation 1
+			float orientationSpeedMax 1.5
+			float orientationSpeedMin 1.5
+			float particleSizeBegin 65
+			float particleSizeEnd 70
+			float particleSizeRange 0
+			vector3 position 0 0 -2.663
+			int sequence 0
+			bool startDisabled false
+			float velocityAngle 360
+			float velocityBegin 5
+			float velocityEnd 1
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.1
+			float warmUpTime 0
+			vector3 yawPitchRoll 3.141 1.56 0
+		}
+	}
+	subscript WHIRL
+	{
+		bool autoScale true
+		string renderer Default
+		string texture Sprites\whirl.png
+		subscript Affectors
+		{
+		}
+		subscript Emitter#0
+		{
+			int EmitterEntityId 14
+			float accelerationMax 0
+			float accelerationMin 0
+			int animSequence 0
+			float blendMode 0.5
+			bool clipping true
+			vector4 colorBegin 1 1 1 0.5
+			vector4 colorEnd 1 1 1 0.5
+			bool dynamicBBox true
+			float emitDelay 0
+			float emitDuration 0
+			float emitRate 5
+			float fadeIn 0.2
+			float fadeOut 0.2
+			bool globalSpace true
+			float lifeTimeMax 1.5
+			float lifeTimeMin 1.2
+			int numParticles 5
+			int orientation 2
+			float orientationSpeed 0.5
+			float particleSizeBegin 140
+			float particleSizeEnd 140
+			float particleSizeRange 0
+			vector3 position 0 80 0
+			int sequence 0
+			float velocityAngle 90
+			float velocityBegin 0
+			float velocityEnd 0
+			float velocityExp 1
+			bool velocityFromCenter false
+			float velocityRange 0.2
+			float warmUpTime 0
+			vector3 yawPitchRoll 0 -1.569 0
+		}
+	}
+}

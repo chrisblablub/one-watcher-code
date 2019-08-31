@@ -1,0 +1,100 @@
+{
+	subscript registeredAlphaTextures
+	{
+		string Terrain/terrain_industrial_alpha01.mtrl Terrain/terrain_industrial_alpha01.mtrl
+		string Terrain/terrain_industrial_alpha02.mtrl Terrain/terrain_industrial_alpha02.mtrl
+	}
+	subscript registeredMeshes
+	{
+		string Accelerator.x Accelerator.x
+		string BigRocket.x BigRocket.x
+		string Bumper.x Bumper.x
+		string Burner.x Burner.x
+		string Burner01.x Burner01.x
+		string Burner02.x Burner02.x
+		string ContactMine.x ContactMine.x
+		string Gate01.x Gate01.x
+		string Gun01.x Gun01.x
+		string Hunter.x Hunter.x
+		string HunterEmitter.x HunterEmitter.x
+		string LaserRadiator01.x LaserRadiator01.x
+		string LaserRadiator03.x LaserRadiator03.x
+		string Maget01.x Maget01.x
+		string Magnet01.x Magnet01.x
+		string MetalShard01.x MetalShard01.x
+		string Mine.x Mine.x
+		string PlatformRetainer.x PlatformRetainer.x
+		string RackWheel01.x RackWheel01.x
+		string RackWheel02.x RackWheel02.x
+		string SawBlade01.x SawBlade01.x
+		string SawBlade02.x SawBlade02.x
+		string Scythe.x Scythe.x
+		string SmallRocket.x SmallRocket.x
+		string Spike.x Spike.x
+		string SpikeBall.x SpikeBall.x
+		string SpikeBall02.x SpikeBall02.x
+		string SpikeBallRetainer.x SpikeBallRetainer.x
+		string Switch.x Switch.x
+		string coin.x coin.x
+		string fan01.x fan01.x
+		string fan02.x fan02.x
+		string fence01.x fence01.x
+		string gantry01.x gantry01.x
+		string gantry02.x gantry02.x
+		string gantry03.x gantry03.x
+		string gantry04.x gantry04.x
+		string gantry05.x gantry05.x
+		string gantry06.x gantry06.x
+		string gantry07.x gantry07.x
+		string gantry08.x gantry08.x
+		string gantry09.x gantry09.x
+		string iceshard.x iceshard.x
+		string light01.x light01.x
+		string light02.x light02.x
+		string pipe01.x pipe01.x
+		string pipe02.x pipe02.x
+		string pipe03.x pipe03.x
+		string pipe04.x pipe04.x
+		string pipe05.x pipe05.x
+		string pipe06.x pipe06.x
+		string pipe07.x pipe07.x
+		string pipe08.x pipe08.x
+		string platform01.x platform01.x
+		string platform02.x platform02.x
+		string platform03.x platform03.x
+		string platform04.x platform04.x
+		string pointlight.X pointlight.X 
+		string robotLowerArmT1.x robotLowerArmT1.x
+		string robotLowerArmT2.x robotLowerArmT2.x
+		string robotUpperArmT1.x robotUpperArmT1.x
+		string robotUpperArmT2.x robotUpperArmT2.x
+		string skydome.X skydome.X
+		string spotlight.X spotlight.X
+		string tower01.x tower01.x
+		string tower02.x tower02.x
+		string track01.x track01.x
+		string tube01.x tube01.x
+		string tube02.x tube02.x
+		string tube03.x tube03.x
+		string vent.x vent.x
+	}
+	subscript registeredTerrainTextures
+	{
+		subscript chapter1
+		{
+			string material Terrain/terrain_chapter1.mtrl
+		}
+		subscript chapter2
+		{
+			string material Terrain/terrain_chapter2.mtrl
+		}
+		subscript chapter3
+		{
+			string material Terrain/terrain_chapter3.mtrl
+		}
+		subscript chapter4
+		{
+			string material Terrain/terrain_chapter4.mtrl
+		}
+	}
+}

@@ -1,0 +1,114 @@
+// ============================================================================
+// FastBuild: QEditor
+// ============================================================================
+{
+	.ProjectName	= 'QEditor'
+	.ProjectRoot	= 'Code\QEditor'
+	
+	// ============================================================================
+	// VS Project
+	// ============================================================================
+	
+	VCXProject( '$ProjectName$-vcxproj' )
+	{
+		.ProjectOutput	   = 'Build\$ProjectName$\$ProjectName$.vcxproj'
+		.ProjectInputPaths = '$ProjectRoot$'
+		.ProjectBasePath   = '$ProjectRoot$'
+	}
+	
+	// ============================================================================
+	// Qt UIC
+	// ============================================================================
+
+	ObjectList( '$ProjectName$-UIGen' )
+	{
+		Using( .qtUiCompiler )
+		
+		.CompilerInputPath   = { '$ProjectRoot$\UI' }
+		.CompilerIncludePath =   '$ProjectRoot$'
+		.CompilerOutputPath	 =   '$ProjectRoot$\UIGen'
+	}
+	
+	// ============================================================================
+	// Qt MOC
+	// ============================================================================
+	
+	ObjectList( '$ProjectName$-MOCGen' )
+	{
+		Using( .qtMocCompiler )
+		
+		.CompilerInputPath   = { '$ProjectRoot$\Panels', 
+								 '$ProjectRoot$\Core' }
+		.CompilerIncludePath =   '$ProjectRoot$'
+		.CompilerOutputPath	 =   '$IntermediateDir$\$ProjectName$\MOCGen'
+	}
+	
+	// ============================================================================
+	// Unity: moc'ed + source code
+	// ============================================================================
+	
+	Unity( '$ProjectName$-Unity' )
+	{
+		.UnityInputPath           = '$ProjectRoot$\'
+		.UnityInputObjectLists    = '$ProjectName$-MocGen'
+		.UnityOutputPath          = '$IntermediateDir$\Unity\$ProjectRoot$\'
+	}
+		
+	// ============================================================================
+	// Targets
+	// ============================================================================
+	
+	ForEach( .BuildConfig in .Configs )
+	{
+		Using( .BuildConfig )
+		
+		ObjectList( '$ProjectName$-Obj-$Platform$-$Config$' )
+		{
+			.CompilerInputUnity	  = '$ProjectName$-Unity'
+			.CompilerIncludePath  = '$ProjectRoot$'
+			.CompilerOutputPath	  = '$IntermediateDir$\$Platform$\$Config$\$ProjectName$'
+		}
+		
+		Executable( '$ProjectName$-Exe-$Platform$-$Config$' )
+		{
+			.Libraries			= { 'Common-Lib-$Platform$-$Config$',
+									'Graphic-Lib-$Platform$-$Config$',
+									'Engine-Lib-$Platform$-$Config$',
+									'QEditorPanelBox-Obj-$Platform$-$Config$',
+									'QEditor-Obj-$Platform$-$Config$' }
+									
+			.LinkerOutput		= '$Platform$\$ProjectName$$PlatformSuffix$$BuildSuffix$.exe'
+			.LinkerOptions		+ ' -SUBSYSTEM:WINDOWS'
+								+ ' qtmain$QtBuildSuffix$.lib'
+								+ ' Qt5Core$QtBuildSuffix$.lib'
+								+ ' Qt5Gui$QtBuildSuffix$.lib'
+								+ ' Qt5Widgets$QtBuildSuffix$.lib'
+								+ ' Qt5Xml$QtBuildSuffix$.lib'
+								+ ' "shell32.lib"'
+								+ ' "fmod_vc.lib"'
+		}
+		
+		Alias( '$ProjectName$-$Platform$-$Config$' )   
+		{ 
+			.Targets = { '$ProjectName$-UIGen',
+						 '$ProjectName$-MOCGen',
+						 '$ProjectName$-Exe-$Platform$-$Config$' }
+		}
+	}
+	
+	Alias( '$ProjectName$-Debug' )
+	{
+		.Targets = { '$ProjectName$-UIGen',
+					 '$ProjectName$-MocGen', 
+					 '$ProjectName$-x86-Debug', 
+					 '$ProjectName$-x64-Debug' }
+	}
+	
+	Alias( '$ProjectName$-Release' )
+	{
+		.Targets = { '$ProjectName$-UIGen',
+					 '$ProjectName$-MocGen', 
+				     '$ProjectName$-x86-Release', 
+					 '$ProjectName$-x64-Release' }
+	}
+}

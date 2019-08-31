@@ -1,0 +1,282 @@
+
+// ============================================================================
+// External dependencies
+// ============================================================================
+
+#include "Extern.bff"	
+
+// ============================================================================
+// VS2015 Base
+// ============================================================================
+
+#if WIN10
+
+.Includes = ' -I"$WinSDKIncUM$"'
+		  + ' -I"$WinSDKIncUCRT$"'
+		  + ' -I"$WinSDKIncSHARED$"'
+		  + ' -I"$WinSDKIncWINRT$"'
+		  + ' -I"$VSRoot$\VC\include"'
+		  
+#endif // WIN10
+
+#if !WIN10
+
+.Includes = ' -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include"'
+		  + ' -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include"'
+		  + ' -I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt"'
+		  + ' -I"C:\Program Files (x86)\Windows Kits\8.1\Include\um"'
+		  + ' -I"C:\Program Files (x86)\Windows Kits\8.1\Include\shared"'
+		  + ' -I"C:\Program Files (x86)\Windows Kits\8.1\Include\winrt"'
+		  
+
+
+
+#endif // WIN10
+
+.VSBaseConfig = 
+[
+	Using( .GlmDependency )
+	
+	.CompilerOptions	= '"%1" -Fo"%2" -nologo -c -W2 -Z7 -bigobj'
+						+ ' -D"WIN32" -D"_WIN32" -D"__WINDOWS__" -D"WIN32_LEAN_AND_MEAN"'
+						+ ' -D"ENV_GRAPHIC_API_D3D11" -D"BOOST_EXCEPTION_DISABLE" -D"ENV_PLATFORM_WINDOWS"'
+						+ ' -wd"4577" -wd"4530"'
+						+ ' -I"."'
+						+ ' -I"./Code"'
+						+ ' -I"./Code/QEditorPanelBox/Core"'
+						+ ' -I"$GlmIncludePath$"'
+						+ "$Includes$"
+						
+	.LinkerOptions		= '"%1" -OUT:"%2" -NOLOGO'
+						+ ' user32.lib'
+						+ ' gdi32.lib'
+						+ ' xinput9_1_0.lib'
+						+ ' winmm.lib'
+						+ ' dxgi.lib'
+						+ ' D3DCompiler.lib'
+						+ ' d3d11.lib'
+						+ ' dxguid.lib'
+
+#if VS2015
+	.LinkerOptions		+ ' assimp-vc140-mt.lib'
+#endif // VS2015
+
+#if !VS2015
+	.LinkerOptions		+ ' assimp-vc120-mt.lib'
+#endif // VS2015
+						
+	.LibrarianOptions	= '"%1" -OUT:"%2" -NOLOGO'
+	
+	.PCHOptions			= '"%1" -Fp"%2" -Fo"%3" -nologo -c -W4 -Z7 -bigobj'
+]
+
+// ----------------------------------------------------------------------------
+// VS2015 x64
+// ----------------------------------------------------------------------------
+
+.x64VSBaseConfig =
+[
+	Using( .VSBaseConfig )
+	Using( .x64BoostDependency )
+	Using( .x64AssimpDependency )
+	Using( .x64QtDependency )
+	
+	.Platform			=  'x64'
+	.PlatformSuffix		= '_x64'
+	
+	.Compiler 			= 'Compiler-x64'
+	.CompilerOptions	+ ' -D"WIN64"'
+						+ ' -I"$BoostIncludePath$"'
+						+ ' -I"$AssimpIncludePath$"'
+						+ ' -I"$QtIncludePath$"'
+	
+	.Linker				= '$VSTools64$\link.exe'
+	.LinkerOptions		+ ' -MACHINE:X64'
+						+ ' -LIBPATH:"$VSRoot$\VC\lib\amd64"'
+						+ ' -LIBPATH:"$WinSDKLibUM$\x64"'
+						+ ' -LIBPATH:"$WinSDKLibUCRT$\x64"'
+						+ ' -LIBPATH:"$BoostLibPath$"'
+						+ ' -LIBPATH:"$AssimpLibPath$"'
+						+ ' -LIBPATH:"$QtLibPath$"'
+						
+	.Librarian			= '$VSTools64$\lib.exe'
+]
+
+// ----------------------------------------------------------------------------
+
+.x64VSDebugConfig =
+[
+	Using( .x64VSBaseConfig )
+	
+	.Config				= 'Debug'
+	.CompilerOptions	+ ' -D"DEBUG"'
+						+ ' -MDd'
+	.LinkerOptions		+ ' -DEBUG'
+	.PCHOptions			+ ' -D"DEBUG"'
+	.BuildSuffix		= '_d'
+	.QtBuildSuffix      = 'd'
+]
+
+// ----------------------------------------------------------------------------
+
+.x64VSReleaseConfig =
+[
+	Using( .x64VSBaseConfig )
+	
+	.Config				= 'Release'
+	.CompilerOptions	+ ' -D"RELEASE"'
+						+ ' -MD'
+	.LinkerOptions		+ ' -DEBUG'
+	.PCHOptions			+ ' -D"RELEASE"'
+	.BuildSuffix		= '_r'
+	.QtBuildSuffix      = ''
+]
+			
+// ----------------------------------------------------------------------------
+// VS2015 x86
+// ----------------------------------------------------------------------------
+
+.x86VSBaseConfig =
+[
+	Using( .VSBaseConfig )
+	Using( .x86BoostDependency )
+	Using( .x86AssimpDependency )
+	Using( .x86QtDependency )
+	Using( .SteamDependency )
+	Using( .fmodDependency )
+	
+	.Platform			= 'Win32'
+	.PlatformSuffix		= '_x86'
+	
+	.Compiler 			= 'Compiler-x86'
+	.CompilerOptions	+ ' -D"WIN32"'
+						+ ' -I"$BoostIncludePath$"'
+						+ ' -I"$AssimpIncludePath$"'
+						+ ' -I"$QtIncludePath$"'
+						+ ' -I"$SteamIncludePath$"'
+						+ ' -I"$fmodIncludePath$"'
+						
+	.Linker				= '$VSTools86$\link.exe'
+	.LinkerOptions		+ ' -MACHINE:X86'
+						+ ' -LIBPATH:"$VSRoot$\VC\lib"'
+						+ ' -LIBPATH:"$WinSDKLibUM$\x86"'
+						+ ' -LIBPATH:"$WinSDKLibUCRT$\x86"'
+						+ ' -LIBPATH:"$BoostLibPath$"'
+						+ ' -LIBPATH:"$AssimpLibPath$"'
+						+ ' -LIBPATH:"$QtLibPath$"'
+						+ ' -LIBPATH:"$SteamLibPath$"'
+						+ ' -LIBPATH:"$fmodLibPath$"'
+						+ ' -MANIFEST'
+						
+	.Librarian			= '$VSTools86$\lib.exe'
+]
+
+// ----------------------------------------------------------------------------
+
+.x86VSDebugConfig =
+[
+	Using( .x86VSBaseConfig )
+	
+	.Config				= 'Debug'
+	.CompilerOptions	+ ' -D"DEBUG"'
+						+ ' -MDd'
+	.LinkerOptions		+ ' -DEBUG'
+	.PCHOptions			+ ' -D"DEBUG"'
+	.BuildSuffix		= '_d'
+	.QtBuildSuffix      = 'd'
+]
+
+// ----------------------------------------------------------------------------
+
+.x86VSReleaseConfig =
+[
+	Using( .x86VSBaseConfig )
+	
+	.Config				= 'Release'
+	.CompilerOptions	+ ' -D"RELEASE"'
+						+ ' -MD'
+	.LinkerOptions		+ ' -DEBUG'
+	.PCHOptions			+ ' -D"RELEASE"'
+	.BuildSuffix		= '_r'
+	.QtBuildSuffix      = ''
+]
+
+// ----------------------------------------------------------------------------
+
+.x86VSFinalConfig =
+[
+	Using( .x86VSBaseConfig )
+	
+	.Config				= 'Final'
+	.CompilerOptions	+ ' -D"RELEASE"'
+						+ ' -D"FINAL"'
+						+ ' -MD'
+						+ ' /Ox'
+ //Link-time code generation: SLOW when building, no major perf impact..			
+                        + ' /GL'
+	.LinkerOptions      + ' /LTCG'
+	.PCHOptions			+ ' -D"RELEASE"'
+						+ ' -D"FINAL"'
+	.BuildSuffix		= '_f'
+	.QtBuildSuffix      = ''
+]
+
+.x86VSProfileConfig =
+[
+	Using( .x86VSBaseConfig )
+	
+	.Config				= 'Profile'
+	.CompilerOptions	+ ' -D"RELEASE"'
+						+ ' -D"FINAL"'
+						+ ' -D"PROFILE"'
+						+ ' -MD'
+						+ ' /Ox'
+	.LinkerOptions		+ ' -DEBUG'
+	.PCHOptions			+ ' -D"RELEASE"'
+						+ ' -D"FINAL"'
+						+ ' -D"PROFILE"'
+	.BuildSuffix		= '_p'
+	.QtBuildSuffix      = ''
+]
+
+
+// ----------------------------------------------------------------------------
+// Qt MOC
+// ----------------------------------------------------------------------------
+
+.qtMocCompiler = 
+[
+	Using( .x86QtDependency )
+	
+	.Compiler 				= 'Compiler-MOC-x86'
+	.CompilerOptions 		= '"%1" -o "%2"'
+                            + ' -I.'	
+							+ ' -I"$QtIncludePath$"'
+							
+	.CompilerInputPattern    = '*.h'
+    .CompilerOutputExtension = '_moc.cpp'
+]
+
+// ----------------------------------------------------------------------------
+// Qt UIC
+// ----------------------------------------------------------------------------
+
+.qtUiCompiler = 
+[
+	Using( .x86QtDependency )
+		
+	.Compiler 				= 'Compiler-UIC-x86'
+	.CompilerOptions 		= '"%1" -o "%2"'
+							
+	.CompilerInputPattern        = '*.ui'
+    .CompilerOutputExtension     = '_ui.h'
+]
+
+// ----------------------------------------------------------------------------
+
+.Configs = { .x86VSDebugConfig, 
+			 .x86VSReleaseConfig,
+			 .x86VSFinalConfig, 
+			 .x86VSProfileConfig,
+			 .x64VSDebugConfig, 
+			 .x64VSReleaseConfig }

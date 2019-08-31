@@ -1,0 +1,19 @@
+{
+	subscript texture
+	{
+		string texture GUI/Main/btnStart.png
+	}
+	
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 2
+		int FrameCount 1
+		int FrameWidth 256
+		int FrameHeight 64
+		float FrameTime 0
+		int BorderWidth 0
+	}
+	
+}

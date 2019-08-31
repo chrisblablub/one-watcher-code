@@ -1,0 +1,10 @@
+/Build/
+/Win32/*.exe
+/Win32/*.manifest
+/Win32/*.exp
+/Win32/*.ilk
+/Win32/*.lib
+/Win32/*.pdb
+/Win32/save
+/Win32/Log.txt
+fbuild.fdb

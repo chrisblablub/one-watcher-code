@@ -1,0 +1,55 @@
+
+.GlmDependency = 
+[ 
+	.GlmIncludePath = '.\extern\glm\include' 
+]
+
+.x86QtDependency = 
+[ 
+	.QtIncludePath  = '.\extern\Qt_5_7\include' 
+	.QtLibPath 		= '.\extern\Qt_5_7\lib\x86' 
+	.QtBinPath		= '.\extern\Qt_5_7\bin'
+]
+
+.x64QtDependency = 
+[ 
+	.QtIncludePath  = '.\extern\Qt_5_7\include' 
+	.QtLibPath 		= '.\extern\Qt_5_7\lib\x64' 
+]
+
+.x86BoostDependency = 
+[ 
+	.BoostIncludePath = '.\extern\boost_1_59_0\include' 
+	.BoostLibPath	  = '.\extern\boost_1_59_0\lib\x86'
+]
+
+.x64BoostDependency = 
+[ 
+	.BoostIncludePath = '.\extern\boost_1_59_0\include' 
+	.BoostLibPath	  = '.\extern\boost_1_59_0\lib\x64'
+]
+
+.x86AssimpDependency = 
+[ 
+	.AssimpIncludePath  = '.\extern\assimp\include' 
+	.AssimpLibPath		= '.\extern\assimp\lib\x86'
+]
+
+.x64AssimpDependency = 
+[ 
+	.AssimpIncludePath  = '.\extern\assimp\include' 
+	.AssimpLibPath		= '.\extern\assimp\lib\x64'
+]
+
+
+.SteamDependency = 
+[ 
+	.SteamIncludePath  = '.\extern\steam' 
+	.SteamLibPath	   = '.\extern\steam\lib'
+]
+
+.fmodDependency = 
+[ 
+	.fmodIncludePath  = '.\extern\fmod\api\lowlevel\inc' 
+	.fmodLibPath	  = '.\extern\fmod\api\lowlevel\lib'
+]

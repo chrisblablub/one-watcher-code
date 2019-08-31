@@ -1,0 +1,14 @@
+{
+	bool templateInit true
+	subscript frame
+	{
+		vector4 fadeFrameBeginColorBot 0 0 0 1
+		vector4 fadeFrameBeginColorTop 0.01188 0.03995 0.1062 1
+		float fadeFrameDelay 0
+		float fadeFrameDuration 0.5
+		vector4 fadeFrameEndColorBot 0 0 0 1
+		vector4 fadeFrameEndColorTop 0.01188 0.03995 0.1062 1
+		vector4 fadeFrameParamsBegin 0 0 0 0
+		vector4 fadeFrameParamsEnd 0.1 0.1 0.1 0.1
+	}
+}

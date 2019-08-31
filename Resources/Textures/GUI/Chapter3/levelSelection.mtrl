@@ -1,0 +1,19 @@
+{
+	subscript texture
+	{
+		string texture GUI/Chapter3/levelSelection.png
+	}
+	
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 12
+		int FrameCount 2
+		int FrameWidth 512
+		int FrameHeight 64
+		float FrameTime 0
+		int BorderWidth 0
+	}
+	
+}

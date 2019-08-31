@@ -1,0 +1,21 @@
+{
+	subscript texture
+	{
+		string texture Sprites/energyStream.png
+	}
+
+
+
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 2
+		int FrameCount 1
+		int FrameWidth 128
+		int FrameHeight 256
+		float FrameTime 1
+		int BorderWidth 0
+	}
+
+}

@@ -1,0 +1,33 @@
+{
+	subscript texture
+	{
+		string texture Terrain/terrain_chapter1.dds
+	}
+
+	subscript normalmap
+	{
+		string normalmap Terrain/terrain_chapter1_nmap.dds
+	}
+
+	subscript specularmap
+	{
+		string specularmap Terrain/terrain_chapter1_specmap.dds
+	}
+
+	subscript emissivemap
+	{
+		string emissivemap Terrain/terrain_chapter1_emismap.dds
+	}
+
+	subscript animation
+	{
+		int posLeft 0
+		int posTop 0
+		int Sequences 32
+		int FrameCount 1
+		int FrameWidth 64	
+		int FrameHeight 64
+		float FrameTime 1
+		int BorderWidth 0
+	}
+}

@@ -1,0 +1,67 @@
+// ============================================================================
+// FastBuild: Common
+// ============================================================================
+{
+	.ProjectName	= 'Common'
+	.ProjectRoot	= 'Code\Common'
+	
+	// ============================================================================
+	// VS Project
+	// ============================================================================
+	
+	VCXProject( '$ProjectName$-vcxproj' )
+	{
+		.ProjectOutput	   = 'Build\$ProjectName$\$ProjectName$.vcxproj'
+		.ProjectInputPaths = '$ProjectRoot$'
+		.ProjectBasePath   = '$ProjectRoot$'
+	}
+	
+	// ============================================================================
+	// Unity
+	// ============================================================================
+	
+	Unity( '$ProjectName$-Unity-Windows' ) 
+	{
+		.UnityInputPath  = '$ProjectRoot$\'
+		.UnityOutputPath = '$IntermediateDir$\Unity\$ProjectRoot$\'
+	}
+	
+	// ============================================================================
+	// Targets
+	// ============================================================================
+	
+	ForEach( .BuildConfig in .Configs )
+	{
+		Using( .BuildConfig )
+		
+		Library( '$ProjectName$-Lib-$Platform$-$Config$' )
+		{
+			.CompilerInputUnity	= '$ProjectName$-Unity-Windows'
+			
+			.CompilerOutputPath	= '$IntermediateDir$\$Platform$\$Config$\$ProjectName$'
+			.LibrarianOutput	= '$IntermediateDir$\$Platform$\$Config$\$ProjectName$\$ProjectName$$PlatformSuffix$$BuildSuffix$.lib'
+		}
+		
+		Alias( '$ProjectName$-$Platform$-$Config$' )   
+		{ 
+			.Targets = { '$ProjectName$-Lib-$Platform$-$Config$' }
+		}
+	}
+	
+	Alias( '$ProjectName$-Debug' )
+	{
+		.Targets = { '$ProjectName$-x86-Debug', 
+					 '$ProjectName$-x64-Debug' }
+	}
+	
+	Alias( '$ProjectName$-Release' )
+	{
+		.Targets = { '$ProjectName$-x86-Release', 
+					 '$ProjectName$-x64-Release' }
+	}
+	
+	Alias( '$ProjectName$-Final' )
+	{
+		.Targets = { '$ProjectName$-x86-Final' }
+	}
+}

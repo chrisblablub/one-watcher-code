@@ -1,0 +1,60 @@
+
+// ============================================================================
+// Local directories
+// ============================================================================
+
+//#define WIN10
+#define VS2015
+
+.VSRoot 	= 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'
+.VSTools86 	= '$VSRoot$\VC\bin\'
+.VSTools64 	= '$VSRoot$\VC\bin\amd64\'
+
+#if WIN10
+
+.WinSDK	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0'
+.WinSDKIncUM	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um'
+.WinSDKIncSHARED = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared'
+.WinSDKIncWINRT	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt'
+.WinSDKIncUCRT	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt'
+.WinSDKLibUM	 = 'C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\um'
+.WinSDKLibUCRT   = 'C:\Program Files (x86)\Windows Kits\10\Lib\10.0.14393.0\ucrt'
+
+#endif
+
+#if !WIN10
+
+.WinSDK	         = 'C:\Program Files (x86)\Windows Kits\8.1'
+.WinSDKIncUM	 = 'C:\Program Files (x86)\Windows Kits\8.1\Include\um'
+.WinSDKIncSHARED = 'C:\Program Files (x86)\Windows Kits\8.1\Include\shared'
+.WinSDKIncWINRT	 = 'C:\Program Files (x86)\Windows Kits\8.1\Include\winrt'
+.WinSDKLibUM	 = 'C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um'
+.WinSDKIncUCRT	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt'
+.WinSDKLibUCRT   = 'C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10240.0\ucrt'
+
+
+#endif // WIN10
+
+
+
+// ============================================================================
+// Settings
+// ============================================================================
+
+.IntermediateDir = 'Build'
+
+.ProjectAllowedFileExtensions = { '.cpp', '.h', '.hlsl' }
+
+Settings
+{
+	#import TMP
+	#import SYSTEMROOT
+	
+	.Environment = { 
+						'PATH=$VSRoot$\Common7\IDE\;$VSRoot$\VC\bin\',
+						'TMP=$TMP$'
+						'SystemRoot=$SYSTEMROOT$'
+				   }
+				   
+	.CachePath	 = 'c:\.fbuild.cache'
+}

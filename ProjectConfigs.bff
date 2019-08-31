@@ -1,0 +1,112 @@
+// ============================================================================
+// Project Configs
+// ============================================================================
+
+.ProjectCommon =
+[
+	.ProjectBuildCommand	= 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache ^$(ProjectName)-^$(Platform)-^$(Configuration)'
+	.ProjectRebuildCommand	= 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache -clean ^$(ProjectName)-^$(Platform)-^$(Configuration)'
+	
+	.OutputDirectory		= '^$(SolutionDir)\..\$IntermediateDir$'
+	.IntermediateDirectory	= '^$(SolutionDir)\..\$IntermediateDir$'
+
+	.PlatformToolset		= 'v140'
+]
+
+// ----------------------------------------------------------------------------
+// VS2015 x86
+// ----------------------------------------------------------------------------
+
+.ProjectX86Debug = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Debug' 
+	.Platform = 'Win32'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_d.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ----------------------------------------------------------------------------
+
+.ProjectX86Release = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Release' 
+	.Platform = 'Win32'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_r.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ----------------------------------------------------------------------------
+
+.ProjectX86Final = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Final' 
+	.Platform = 'Win32'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_f.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ----------------------------------------------------------------------------
+
+.ProjectX86Profile = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Profile' 
+	.Platform = 'Win32'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_p.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ----------------------------------------------------------------------------
+// VS2015 x64
+// ----------------------------------------------------------------------------
+
+.ProjectX64Debug = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Debug' 
+	.Platform = 'x64'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x64_d.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ----------------------------------------------------------------------------
+
+.ProjectX64Release = 
+[ 
+	Using( .ProjectCommon ) 
+	
+	.Config   = 'Release' 
+	.Platform = 'x64'
+	
+	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x64_r.exe'
+	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
+]
+
+// ============================================================================
+// Projects
+// ============================================================================
+
+.ProjectConfigs = { .ProjectX86Debug,
+					.ProjectX86Release,
+					.ProjectX86Final,
+					.ProjectX86Profile,
+					.ProjectX64Debug,
+					.ProjectX64Release }
+					
+.ProjectConfigsEditor = { .ProjectX86Debug,
+						  .ProjectX86Release,
+						  .ProjectX64Debug,
+						  .ProjectX64Release }
