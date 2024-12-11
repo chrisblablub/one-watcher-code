@@ -18,14 +18,14 @@ Compiler( 'Compiler-x64' )
 					'$VSTools64$\c1xx.dll',
 					'$VSTools64$\c2.dll',
 					'$VSTools64$\1033\clui.dll'
-					'$VSTools64$\msobj120.dll'
-					'$VSTools64$\mspdb120.dll'
+					'$VSTools64$\msobj140.dll'
+					'$VSTools64$\mspdb140.dll'
 					'$VSTools64$\mspdbsrv.exe'
 					'$VSTools64$\mspdbcore.dll'
 					'$VSTools64$\mspft140.dll'
-					'$VSTools64$\..\..\redist\x64\Microsoft.VC140.CRT\concrt140.dll'
-					'$VSTools64$\..\..\redist\x64\Microsoft.VC140.CRT\msvcp140.dll'
-					'$VSTools64$\..\..\redist\x64\Microsoft.VC140.CRT\vccorlib140.dll'
+					'$VSRedist64$\Microsoft.VC142.CRT\concrt140.dll'
+					'$VSRedist64$\Microsoft.VC142.CRT\msvcp140.dll'
+					'$VSRedist64$\Microsoft.VC142.CRT\vccorlib140.dll'
 				  }
 }
 
@@ -44,9 +44,9 @@ Compiler( 'Compiler-x86' )
 					'$VSTools86$\mspdbsrv.exe'
 					'$VSTools86$\mspdbcore.dll'
 					'$VSTools86$\mspft140.dll'
-					'$VSTools86$\..\redist\x86\Microsoft.VC140.CRT\concrt140.dll'
-					'$VSTools86$\..\redist\x86\Microsoft.VC140.CRT\msvcp140.dll'
-					'$VSTools86$\..\redist\x86\Microsoft.VC140.CRT\vccorlib140.dll'
+					'$VSRedist86$\Microsoft.VC142.CRT\concrt140.dll'
+					'$VSRedist86$\Microsoft.VC142.CRT\msvcp140.dll'
+					'$VSRedist86$\Microsoft.VC142.CRT\vccorlib140.dll'
 				  }
 }
 
@@ -69,8 +69,8 @@ Compiler( 'Compiler-x64' )
 					'$VSTools64$\mspdbsrv.exe'
 					'$VSTools64$\mspdbcore.dll'
 					'$VSTools64$\mspft120.dll'
-					'$VSTools64$\..\..\redist\x64\Microsoft.VC120.CRT\msvcp120.dll'
-					'$VSTools64$\..\..\redist\x64\Microsoft.VC120.CRT\vccorlib120.dll'
+					'$VSRedist64$\Microsoft.VC120.CRT\msvcp120.dll'
+					'$VSRedist64$\Microsoft.VC120.CRT\vccorlib120.dll'
 				  }
 }
 
@@ -89,8 +89,8 @@ Compiler( 'Compiler-x86' )
 					'$VSTools86$\mspdbsrv.exe'
 					'$VSTools86$\mspdbcore.dll'
 					'$VSTools86$\mspft120.dll'
-					'$VSTools86$\..\redist\x86\Microsoft.VC120.CRT\msvcp120.dll'
-					'$VSTools86$\..\redist\x86\Microsoft.VC120.CRT\vccorlib120.dll'
+					'$VSRedist86$\Microsoft.VC120.CRT\msvcp120.dll'
+					'$VSRedist86$\Microsoft.VC120.CRT\vccorlib120.dll'
 				  }
 }
 

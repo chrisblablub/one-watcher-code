@@ -2,8 +2,11 @@
 #ifndef STEAM_HANDLER_H
 #define STEAM_HANDLER_H
 
+#ifdef ENV_FINAL
+
 #include <steam_api.h>
 #include <isteamuserstats.h>
+
 
 class SteamHandler
 {
@@ -33,5 +36,5 @@ public:
     static void IncreaseStat_DeathCounter();
     static void SetStat_ChapterProgress(const int chapter, const int levelBested, const bool bossFinished);
 };
-
+#endif
 #endif

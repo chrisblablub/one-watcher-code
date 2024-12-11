@@ -3,12 +3,18 @@
 // Local directories
 // ============================================================================
 
-//#define WIN10
+#define WIN10
 #define VS2015
 
-.VSRoot 	= 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'
-.VSTools86 	= '$VSRoot$\VC\bin\'
-.VSTools64 	= '$VSRoot$\VC\bin\amd64\'
+
+//.VSRoot 	= 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'
+.VSRoot 	  = 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community'
+.VSTools86 	= '$VSRoot$\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x86\'
+.VSTools64 	= '$VSRoot$\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\'
+
+.VSRedist86 	= '$VSRoot$\VC\Redist\MSVC\14.29.30133\x86\'
+.VSRedist64 	= '$VSRoot$\VC\Redist\MSVC\14.29.30133\x64\'
+
 
 #if WIN10
 

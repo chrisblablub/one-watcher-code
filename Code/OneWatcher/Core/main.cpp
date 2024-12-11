@@ -1,5 +1,5 @@
 #include <Engine/Core/Engine.h>
-#include <OneWatcher/Core/SteamHandler.h>
+//#include <OneWatcher/Core/SteamHandler.h>
 
 const unsigned int STEAM_APP_ID = 727150;
 const int STEAM_RETURN_CODE = 100;
@@ -40,9 +40,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     //_CrtDumpMemoryLeaks();
 
-    //#ifdef ENV_FINAL
+    #ifdef ENV_FINAL
     SteamHandler::Shutdown();
-    //#endif
+    #endif
 
     return 0;
 }

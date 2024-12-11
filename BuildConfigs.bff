@@ -15,7 +15,7 @@
 		  + ' -I"$WinSDKIncUCRT$"'
 		  + ' -I"$WinSDKIncSHARED$"'
 		  + ' -I"$WinSDKIncWINRT$"'
-		  + ' -I"$VSRoot$\VC\include"'
+		  + ' -I"$VSRoot$\VC\Tools\MSVC\14.29.30133\include"'
 		  
 #endif // WIN10
 
@@ -166,6 +166,7 @@
 						+ ' -LIBPATH:"$QtLibPath$"'
 						+ ' -LIBPATH:"$SteamLibPath$"'
 						+ ' -LIBPATH:"$fmodLibPath$"'
+            + ' -LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\lib\onecore\x86"'
 						+ ' -MANIFEST'
 						
 	.Librarian			= '$VSTools86$\lib.exe'

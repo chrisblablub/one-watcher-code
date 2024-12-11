@@ -594,8 +594,9 @@ namespace env
                 m_pSFXSound->PlaySound(AUDIO_CHANNELGROUP_EFFECTS_PREVIEW, -1);
 
 				bool isMusicPaused = false;
+#ifdef ENV_FINAL
 				gEngine->GetAudioSystem()->GetChannelGroup(AUDIO_CHANNELGROUP_MUSIC)->getPaused(&isMusicPaused);
-
+#endif
 				if (isMusicPaused)
 				{
 					m_pMusic->SetVolume(1.0f);
