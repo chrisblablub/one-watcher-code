@@ -2,6 +2,8 @@
 // Project Configs
 // ============================================================================
 
+.Includes = '$WinSDKIncUM$;$WinSDKIncUCRT$;$WinSDKIncSHARED$;$WinSDKIncWINRT$;$VSRoot$\VC\Tools\MSVC\14.29.30133\include'
+
 .ProjectCommon =
 [
 	.ProjectBuildCommand	= 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache ^$(ProjectName)-^$(Platform)-^$(Configuration)'
@@ -9,8 +11,10 @@
 	
 	.OutputDirectory		= '^$(SolutionDir)\..\$IntermediateDir$'
 	.IntermediateDirectory	= '^$(SolutionDir)\..\$IntermediateDir$'
+	//.IncludeSearchPath		= '^$(SolutionDir)\..\Code;^$(SolutionDir)\..\Extern\glm\include;' + "$Includes$"
+	//.PreprocessorDefinitions = "DEBUG"
+	.PlatformToolset		= 'v142'
 
-	.PlatformToolset		= 'v140'
 ]
 
 // ----------------------------------------------------------------------------
@@ -22,7 +26,9 @@
 	Using( .ProjectCommon ) 
 	
 	.Config   = 'Debug' 
-	.Platform = 'Win32'
+	.Platform = 'Win32' 
+		.Target = 'Compiler-x86'
+	//.PreprocessorDefinitions = 'WIN32;_WIN32;__WINDOWS__;WIN32_LEAN_AND_MEAN;ENV_GRAPHIC_API_D3D11;BOOST_EXCEPTION_DISABLE;ENV_PLATFORM_WINDOWS'
 	
 	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_d.exe'
 	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
