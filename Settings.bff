@@ -3,17 +3,11 @@
 // Local directories
 // ============================================================================
 
-
-//.VSRoot 	= 'C:\Program Files (x86)\Microsoft Visual Studio 14.0'
-.VSRoot 	  = 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community'
-.VSTools86 	= '$VSRoot$\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x86\'
-.VSTools64 	= '$VSRoot$\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\'
-
+.VSRoot 		= 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community'
+.VSTools86 		= '$VSRoot$\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x86\'
 .VSRedist86 	= '$VSRoot$\VC\Redist\MSVC\14.29.30133\x86\'
-.VSRedist64 	= '$VSRoot$\VC\Redist\MSVC\14.29.30133\x64\'
 
-
-.WinSDK	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0'
+.WinSDK			 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0'
 .WinSDKIncUM	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\um'
 .WinSDKIncSHARED = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\shared'
 .WinSDKIncWINRT	 = 'C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\winrt'

@@ -53,7 +53,7 @@ VSSolution( 'OneWatcher-sln' )
 	
 	.SolutionBuildProject  = 'OneWatcher-vcxproj'
 	
-	.SolutionOutput		= 'Build/OneWatcherVS2015.sln'
+	.SolutionOutput		= 'Build/OneWatcherVS2019.sln'
 	
 	.SolutionProjects	= { 'Common-vcxproj',
 							'Graphic-vcxproj',
@@ -75,7 +75,7 @@ VSSolution( 'QEditor-sln' )
 	
 	.SolutionBuildProject  = 'QEditor-vcxproj'
 	
-	.SolutionOutput		= 'Build/QEditorVS2015.sln'
+	.SolutionOutput		= 'Build/QEditorVS2019.sln'
 	
 	.SolutionProjects	= { 'Common-vcxproj',
 							'Graphic-vcxproj',

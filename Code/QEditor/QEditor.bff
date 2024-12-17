@@ -100,15 +100,13 @@
 	{
 		.Targets = { '$ProjectName$-UIGen',
 					 '$ProjectName$-MocGen', 
-					 '$ProjectName$-x86-Debug', 
-					 '$ProjectName$-x64-Debug' }
+					 '$ProjectName$-x86-Debug' }
 	}
 	
 	Alias( '$ProjectName$-Release' )
 	{
 		.Targets = { '$ProjectName$-UIGen',
 					 '$ProjectName$-MocGen', 
-				     '$ProjectName$-x86-Release', 
-					 '$ProjectName$-x64-Release' }
+				     '$ProjectName$-x86-Release' }
 	}
 }

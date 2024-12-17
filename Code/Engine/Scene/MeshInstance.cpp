@@ -2,6 +2,7 @@
 #include <Engine/Core/BoundingBoxDataCache.h>
 #include <Engine/Core/Engine.h>
 #include <Engine/Math/Intersection.h>
+#include <Engine/Scene/SceneMgr.h>
 #include <Graphic/Core/Mesh.h>
 #include <Common/Core/BoundingVolume.h>
 

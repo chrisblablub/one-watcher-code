@@ -590,6 +590,7 @@ namespace env
                     renderQualityParams.bWindowed = !m_pRenderSystem->GetRenderDevice()->GetFullscreen();
                     
                      m_pRenderSystem->ResetDevice(renderQualityParams);
+                     
                     
                      OnResetDevice();
 

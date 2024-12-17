@@ -8,29 +8,6 @@
 // Visual Studio
 // ============================================================================
 
-
-
-Compiler( 'Compiler-x64' )
-{
-	.Executable = '$VSTools64$\cl.exe'
-	
-	.ExtraFiles	= { '$VSTools64$\c1.dll',
-					'$VSTools64$\c1xx.dll',
-					'$VSTools64$\c2.dll',
-					'$VSTools64$\1033\clui.dll'
-					'$VSTools64$\msobj140.dll'
-					'$VSTools64$\mspdb140.dll'
-					'$VSTools64$\mspdbsrv.exe'
-					'$VSTools64$\mspdbcore.dll'
-					'$VSTools64$\mspft140.dll'
-					'$VSRedist64$\Microsoft.VC142.CRT\concrt140.dll'
-					'$VSRedist64$\Microsoft.VC142.CRT\msvcp140.dll'
-					'$VSRedist64$\Microsoft.VC142.CRT\vccorlib140.dll'
-				  }
-}
-
-// ----------------------------------------------------------------------------
-
 Compiler( 'Compiler-x86' )
 {
 	.Executable = '$VSTools86$\cl.exe'

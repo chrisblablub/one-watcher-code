@@ -1,0 +1,16 @@
+#One Watcher Engine
+
+## Environment Setup
+- Install VS 2019 Community Edition
+- Set local paths in Settings.bff
+- Validate paths in Compilers.bff / Extrafiles
+
+
+## Build And Run
+- Execute GenerateProjects.bat, which creates OneWatcher.SLN and QEditor.SLN
+- Open either solution in ./Build, set the Startup project to QEditor or OneWatcher and start debugging with F5
+
+## Generate Production Build
+- Package files
+- Compile Shaders
+- Build with Final
