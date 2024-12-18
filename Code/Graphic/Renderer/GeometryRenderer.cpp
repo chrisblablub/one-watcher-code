@@ -914,7 +914,14 @@ namespace env
 
             for (auto& terrainCellBuffer : renderQueue.m_pLevelGridRenderObject->m_terrainBuffers)
             {
-                m_numTerrainTrianglesRendered += terrainCellBuffer.m_numTerrainTriangles;
+                m_numTerrainTrianglesRendered += terrainCellBuffer.m_numTerrainTrianglesLayer0;
+
+                if (terrainCellBuffer.m_numTerrainTrianglesLayer0 > 0)
+                {
+                    m_pDevice->SetIndexBuffer(terrainCellBuffer.m_pIBLayer0);
+                    m_pDevice->SetVertexBuffer(0, 0, terrainCellBuffer.m_pVBLayer0);
+                    m_pDevice->DrawIndexedPrimitive(PRIMITIVE_TYPE_TRIANGLELIST, 0, 0, 0, 0, terrainCellBuffer.m_numTerrainTrianglesLayer0);
+                }
 
                 if (terrainCellBuffer.m_numTerrainTriangles > 0)
                 {

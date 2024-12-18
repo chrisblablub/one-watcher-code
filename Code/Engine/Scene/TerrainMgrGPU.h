@@ -306,8 +306,9 @@ namespace env
 
         void UpdateLayerTransformations();
 
-        void UpdateTerrainCell(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pVertices, TerrainIndex* pIndices);
-        void UpdateTerrainCellIndices(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainIndex* pIndices);
+        //void UpdateTerrainCell(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pVertices, TerrainIndex* pIndices);
+        void UpdateTerrainCellWrapper(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pTerrainVertices, TerrainIndex* pTerrainIndices, TerrainVertex* pVerticesLayer0, TerrainIndex* pIndicesLayer0);
+        void UpdateTerrainCellIndices(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainIndex* pIndices, unsigned int& numTerrainIndices);
         void UpdateTerrainCellVertices(unsigned int x, unsigned int y, unsigned int& numTrianglesAdded, pairHalfCells& phc, TerrainVertex* pVertices);
 
         void AddCellDataToTerrainBuffer(unsigned int& numTrianglesAdded,
@@ -320,7 +321,7 @@ namespace env
                                         CELL_LAYOUT cellLayout,
                                         unsigned int cellLayer);
 
-        void AddIndexDataToindexBuffer(const CTerrainCellIndexer& indexer, TerrainIndex* w, unsigned int baseIndex, CELL_LAYOUT cellLayout);
+        void AddIndexDataToindexBuffer(const CTerrainCellIndexer& indexer, unsigned int& numTerrainIndices, TerrainIndex* w, unsigned int baseIndex, CELL_LAYOUT cellLayout);
 
         void CreateTangentVectors(TerrainVertex& p0, TerrainVertex& p1, TerrainVertex& p2);
         bool CheckLeft(int x, int y, int layer);
