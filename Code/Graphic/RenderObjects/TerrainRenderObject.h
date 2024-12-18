@@ -21,17 +21,27 @@ namespace env
         TerrainBufferCell()
             : m_pVB(nullptr)
             , m_pIB(nullptr)
+            , m_pVBLayer0(nullptr)
+            , m_pIBLayer0(nullptr)
             , m_numTerrainTriangles(0)
-            , m_numTerrainIndices(0) {}
+            , m_numTerrainIndices(0)
+            , m_numTerrainTrianglesLayer0(0)
+            , m_numTerrainIndicesLayer0(0) {}
 
         CVertexBuffer* m_pVB;
         CIndexBuffer* m_pIB;
+        CVertexBuffer* m_pVBLayer0;
+        CIndexBuffer* m_pIBLayer0;
 
         unsigned int m_numTerrainTriangles;
         unsigned int m_numTerrainIndices;
+        unsigned int m_numTerrainTrianglesLayer0;
+        unsigned int m_numTerrainIndicesLayer0;
 
         void Destroy()
         {
+            ENV_DELETE(m_pVBLayer0);
+            ENV_DELETE(m_pIBLayer0);
             ENV_DELETE(m_pVB);
             ENV_DELETE(m_pIB);
 

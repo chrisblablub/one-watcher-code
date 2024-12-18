@@ -55,9 +55,11 @@ namespace env
         CImmediateRenderPass m_renderDebugDataCaches;
         CImmediateRenderPass m_setupDeferredPass;
         CImmediateRenderPass m_geometryDeferredPass;
+        CImmediateRenderPass m_geometryDeferredLayer0Pass;
         CImmediateRenderPass m_geometryTransmissivePass;
         CImmediateRenderPass m_geometryOrthoOutline;
         CImmediateRenderPass m_terrainDeferredPass;
+        CImmediateRenderPass m_terrainDeferredLayer0Pass;
         CImmediateRenderPass m_terrainBorderDeferredPass;
         CImmediateRenderPass m_terrainPreviewDeferredPass;
         CImmediateRenderPass m_terrainSelectionDeferredPass;
@@ -238,11 +240,13 @@ namespace env
         impl.m_renderDebugDataCaches.Init("DebugDataCaches", this, &CRenderSystem::RenderDebugDataCaches);
         impl.m_setupDeferredPass.Init("SetupDeferred", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::SetupDeferredRendering);
         impl.m_geometryDeferredPass.Init("GeometryDeferred", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryDeferred);
+        impl.m_geometryDeferredLayer0Pass.Init("GeometryDeferredLayer0", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryDeferredLayer0);
         impl.m_geometryTransmissivePass.Init("GeometryTransmissive", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryTransmissive);
         impl.m_geometryCharacterPass.Init("GeometryCharacter", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryCharacter);
         impl.m_geometryCharacterDistortPass.Init("GeometryCharacterDistort", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryCharacterDistort);
         impl.m_geometryOrthoOutline.Init("GeometryOutline", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderGeometryOutline);
         impl.m_terrainDeferredPass.Init("Terrain", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderLevelTerrain);
+        impl.m_terrainDeferredLayer0Pass.Init("Terrain", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderLevelTerrainLayer0);
         impl.m_terrainBorderDeferredPass.Init("TerrainBorder", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderLevelTerrainBorder);
         impl.m_terrainPreviewDeferredPass.Init("TerrainPreview", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderLevelTerrainPreview);
         impl.m_terrainSelectionDeferredPass.Init("TerrainSelection", impl.m_pGeometryRenderer.get(), &CGeometryRenderer::RenderLevelTerrainSelection);
@@ -385,9 +389,11 @@ namespace env
 
             AddRenderPass(&impl.m_clearPass);
             AddRenderPass(&impl.m_setupDeferredPass);
-            AddRenderPass(&impl.m_geometryDeferredPass);
             AddRenderPass(&impl.m_terrainBorderDeferredPass);
             AddRenderPass(&impl.m_terrainDeferredPass);
+            AddRenderPass(&impl.m_geometryDeferredLayer0Pass);
+            AddRenderPass(&impl.m_terrainDeferredLayer0Pass);
+            AddRenderPass(&impl.m_geometryDeferredPass);
 
             ENV_NOT_FINAL_CODE(AddRenderPass(&impl.m_terrainSelectionDeferredPass));
             ENV_NOT_FINAL_CODE(AddRenderPass(&impl.m_terrainPreviewDeferredPass));

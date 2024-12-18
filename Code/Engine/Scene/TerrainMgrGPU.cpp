@@ -151,6 +151,8 @@ namespace env
     {
         for (int i = 0; i < m_terrainVertexBuffers.size(); ++i)
         {
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pVBLayer0);
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pIBLayer0);
             ENV_DELETE(m_terrainVertexBuffers[i].m_pVB);
             ENV_DELETE(m_terrainVertexBuffers[i].m_pIB);
         }
@@ -168,10 +170,10 @@ namespace env
     {
         UpdateLayerTransformations();
 
-
-
         for (int i = 0; i < m_terrainVertexBuffers.size(); ++i)
         {
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pVBLayer0);
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pIBLayer0);
             ENV_DELETE(m_terrainVertexBuffers[i].m_pVB);
             ENV_DELETE(m_terrainVertexBuffers[i].m_pIB);
         }
@@ -193,13 +195,12 @@ namespace env
         m_terrainVertexBuffers.resize(m_numVertexBuffersX * m_numVertexBuffersY);
 
 
-
-
-
         for (TerrainBufferCell& bufferCell : m_terrainVertexBuffers)
         {
             bufferCell.m_numTerrainIndices = 0;
             bufferCell.m_numTerrainTriangles = 0;
+            bufferCell.m_numTerrainIndicesLayer0 = 0;
+            bufferCell.m_numTerrainTrianglesLayer0 = 0;
         }
 
         std::vector<std::vector<TerrainVertex>> terrainVertices;
@@ -208,13 +209,21 @@ namespace env
         std::vector<std::vector<TerrainIndex>> terrainIndices;
         terrainIndices.resize(m_terrainVertexBuffers.size());
 
+        std::vector<std::vector<TerrainVertex>> terrainVerticesLayer0;
+        terrainVerticesLayer0.resize(m_terrainVertexBuffers.size());
+
+        std::vector<std::vector<TerrainIndex>> terrainIndicesLayer0;
+        terrainIndicesLayer0.resize(m_terrainVertexBuffers.size());
+
         int cellsX = m_numCellsPerVertexBuffer;
         int cellsY = m_numCellsPerVertexBuffer;
 
         for (size_t i = 0; i < m_terrainVertexBuffers.size(); ++i)
         {
             terrainVertices[i].resize(cellsX * cellsY * 6);
+            terrainVerticesLayer0[i].resize(cellsX * cellsY * 6);
             terrainIndices[i].resize(cellsX * cellsY * 6);
+            terrainIndicesLayer0[i].resize(cellsX * cellsY * 6);
         }
 
         for (mapHalfCells::iterator it = (*m_pHalfCells).begin(); it != (*m_pHalfCells).end(); ++it)
@@ -227,15 +236,19 @@ namespace env
                 continue;
 
             TerrainVertex* pTerrainVertices = &terrainVertices[m_indexer.GetVertexBufferIndex()][0];
+            TerrainVertex* pTerrainVerticesLayer0 = &terrainVerticesLayer0[m_indexer.GetVertexBufferIndex()][0];
             TerrainIndex* pTerrainIndices = &terrainIndices[m_indexer.GetVertexBufferIndex()][0];
+            TerrainIndex* pTerrainIndicesLayer0 = &terrainIndicesLayer0[m_indexer.GetVertexBufferIndex()][0];
 
-            UpdateTerrainCell(m_indexer, it->second, pTerrainVertices, pTerrainIndices);
+            UpdateTerrainCellWrapper(m_indexer, it->second, pTerrainVertices, pTerrainIndices, pTerrainVerticesLayer0, pTerrainIndicesLayer0);
         }
 
         for (size_t i = 0; i < m_terrainVertexBuffers.size(); ++i)
         {
             m_terrainVertexBuffers[i].m_pVB = m_pDevice->CreateVertexBuffer(cellsX * cellsY * 6 * sizeof(TerrainVertex), USAGE_TYPE_GPUREADACCESS, &terrainVertices[i][0]);
+            m_terrainVertexBuffers[i].m_pVBLayer0 = m_pDevice->CreateVertexBuffer(cellsX * cellsY * 6 * sizeof(TerrainVertex), USAGE_TYPE_GPUREADACCESS, &terrainVerticesLayer0[i][0]);
             m_terrainVertexBuffers[i].m_pIB = m_pDevice->CreateIndexBuffer(cellsX * cellsY * 6 * sizeof(TerrainIndex), USAGE_TYPE_GPUREADACCESS, TEXTUREFORMAT_TYPE_INDEX16, &terrainIndices[i][0]);
+            m_terrainVertexBuffers[i].m_pIBLayer0 = m_pDevice->CreateIndexBuffer(cellsX * cellsY * 6 * sizeof(TerrainIndex), USAGE_TYPE_GPUREADACCESS, TEXTUREFORMAT_TYPE_INDEX16, &terrainIndicesLayer0[i][0]);
         }
 
 
@@ -249,7 +262,9 @@ namespace env
         for (int i = 0; i < m_terrainVertexBuffers.size(); ++i)
         {
             ENV_DELETE(m_terrainVertexBuffers[i].m_pVB);
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pVBLayer0);
             ENV_DELETE(m_terrainVertexBuffers[i].m_pIB);
+            ENV_DELETE(m_terrainVertexBuffers[i].m_pIBLayer0);
         }
 
         m_terrainVertexBuffers.clear();
@@ -277,6 +292,8 @@ namespace env
 
                 m_terrainVertexBuffers[x * m_numVertexBuffersY + y].m_pVB = m_pDevice->CreateVertexBuffer(cellsX * cellsY * 6 * sizeof(TerrainVertex), USAGE_TYPE_CPUWRITEACCESS | USAGE_TYPE_GPUREADACCESS);
                 m_terrainVertexBuffers[x * m_numVertexBuffersY + y].m_pIB = m_pDevice->CreateIndexBuffer(cellsX * cellsY * 6 * sizeof(TerrainIndex), USAGE_TYPE_CPUWRITEACCESS | USAGE_TYPE_GPUREADACCESS, TEXTUREFORMAT_TYPE_INDEX16);
+                m_terrainVertexBuffers[x * m_numVertexBuffersY + y].m_pVBLayer0 = m_pDevice->CreateVertexBuffer(cellsX * cellsY * 6 * sizeof(TerrainVertex), USAGE_TYPE_CPUWRITEACCESS | USAGE_TYPE_GPUREADACCESS);
+                m_terrainVertexBuffers[x * m_numVertexBuffersY + y].m_pIBLayer0 = m_pDevice->CreateIndexBuffer(cellsX * cellsY * 6 * sizeof(TerrainIndex), USAGE_TYPE_CPUWRITEACCESS | USAGE_TYPE_GPUREADACCESS, TEXTUREFORMAT_TYPE_INDEX16);
             }
         }
     }
@@ -481,21 +498,21 @@ namespace env
     }
 
     //-----------------------------------------------------------------------------------
-    void CTerrainMgrGPU::UpdateTerrainCellIndices(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainIndex* pIndices)
+    void CTerrainMgrGPU::UpdateTerrainCellIndices(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainIndex* pIndices, unsigned int& numTerrainIndices)
     {
         if (phc.first)
         {
-            AddIndexDataToindexBuffer(indexer, pIndices, 0, phc.first->cellLayout);
+            AddIndexDataToindexBuffer(indexer, numTerrainIndices, pIndices, 0, phc.first->cellLayout);
         }
 
         if (phc.second)
         {
-            AddIndexDataToindexBuffer(indexer, pIndices, 3, phc.second->cellLayout);
+            AddIndexDataToindexBuffer(indexer, numTerrainIndices, pIndices, 3, phc.second->cellLayout);
         }
     }
 
     //-----------------------------------------------------------------------------------
-    void CTerrainMgrGPU::UpdateTerrainCell(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pTerrainVertices, TerrainIndex* pTerrainIndices)
+    void CTerrainMgrGPU::UpdateTerrainCellWrapper(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pTerrainVertices, TerrainIndex* pTerrainIndices, TerrainVertex* pTerrainVerticesLayer0, TerrainIndex* pTerrainIndicesLayer0)
     {
         unsigned int x, y;
 
@@ -505,13 +522,65 @@ namespace env
         unsigned int numTriangles = 0;
 
         TerrainVertex* pVertices = &pTerrainVertices[terrainBaseVertexIndex];
+        TerrainVertex* pVerticesLayer0 = &pTerrainVerticesLayer0[terrainBaseVertexIndex];
 
-        UpdateTerrainCellVertices(x, y, numTriangles, phc, pVertices);
-        UpdateTerrainCellIndices(indexer, phc, pTerrainIndices);
+        pairHalfCells phcCopyLayer0;
+        pairHalfCells phcCopy;
+
+        if (phc.first)
+        {
+            if (phc.first->depthLayer == 0)
+                phcCopyLayer0.first = phc.first;
+            else
+                phcCopy.first = phc.first;
+        } 
+        
+        if (phc.second)
+        {
+            if (phc.second->depthLayer == 0)
+                if (phcCopyLayer0.first)
+                    phcCopyLayer0.second = phc.second;
+                else
+                    phcCopyLayer0.first = phc.second;
+            else
+                if (phcCopy.first)
+                    phcCopy.second = phc.second;
+                else
+                    phcCopy.first = phc.second;
+        }
 
         TerrainBufferCell& bufferCell = m_terrainVertexBuffers[indexer.GetVertexBufferIndex()];
+
+        numTriangles = 0;
+        UpdateTerrainCellVertices(x, y, numTriangles, phcCopyLayer0, pVerticesLayer0);
+        UpdateTerrainCellIndices(indexer, phcCopyLayer0, pTerrainIndicesLayer0, bufferCell.m_numTerrainIndicesLayer0);
+        bufferCell.m_numTerrainTrianglesLayer0 += numTriangles;
+
+        numTriangles = 0;
+        UpdateTerrainCellVertices(x, y, numTriangles, phcCopy, pVertices);
+        UpdateTerrainCellIndices(indexer, phcCopy, pTerrainIndices, bufferCell.m_numTerrainIndices);
         bufferCell.m_numTerrainTriangles += numTriangles;
     }
+
+
+    ////-----------------------------------------------------------------------------------
+    //void CTerrainMgrGPU::UpdateTerrainCell(const CTerrainCellIndexer& indexer, pairHalfCells& phc, TerrainVertex* pTerrainVertices, TerrainIndex* pTerrainIndices)
+    //{
+    //    unsigned int x, y;
+
+    //    indexer.GetCellIndices(x, y);
+
+    //    unsigned int terrainBaseVertexIndex = 6 * indexer.GetBufferCellX() * m_numCellsPerVertexBuffer + indexer.GetBufferCellY() * 6;
+    //    unsigned int numTriangles = 0;
+
+    //    TerrainVertex* pVertices = &pTerrainVertices[terrainBaseVertexIndex];
+
+
+    //    UpdateTerrainCellVertices(x, y, numTriangles, phc, pVertices);
+    //    UpdateTerrainCellIndices(indexer, phc, pTerrainIndices);
+
+    //    TerrainBufferCell& bufferCell = m_terrainVertexBuffers[indexer.GetVertexBufferIndex()];
+    //}
 
     //-----------------------------------------------------------------------------------
     void CTerrainMgrGPU::UpdateTerrainBufferCellTriangles()
@@ -575,7 +644,7 @@ namespace env
     }
 
     //-----------------------------------------------------------------------------------
-        void CTerrainMgrGPU::UpdateTerrainVertexBuffer(const std::vector<unsigned int>& cells)
+    void CTerrainMgrGPU::UpdateTerrainVertexBuffer(const std::vector<unsigned int>& cells)
     {
         if (m_numCellsX == 0 || m_numCellsY == 0)
             return;
@@ -613,7 +682,9 @@ namespace env
                 m_indexer.GetCellIndices(bufferCellX, bufferCellY);
 
                 TerrainVertex* pTerrainVertices = static_cast<TerrainVertex*>(m_terrainVertexBuffers[bufferIndex].m_pVB->Lock(0, 0, 0));
+                TerrainVertex* pTerrainVerticesLayer0 = static_cast<TerrainVertex*>(m_terrainVertexBuffers[bufferIndex].m_pVBLayer0->Lock(0, 0, 0));
                 TerrainIndex* pTerrainIndices = static_cast<TerrainIndex*>(m_terrainVertexBuffers[bufferIndex].m_pIB->Lock(0, 0, 0));
+                TerrainIndex* pTerrainIndicesLayer0 = static_cast<TerrainIndex*>(m_terrainVertexBuffers[bufferIndex].m_pIBLayer0->Lock(0, 0, 0));
 
                 for (unsigned int x = bufferCellX; x < std::min(bufferCellX + m_numCellsPerVertexBuffer, m_numCellsX); ++x)
                 {
@@ -622,18 +693,19 @@ namespace env
                         m_indexer.SetCellIndices(x, y);
 
                         TerrainCell& terrainCell = (*m_pCells)[m_indexer.GetCellIndex()];
-
                         if (terrainCell.pFirst || terrainCell.pSecond)
                         {
                             pairHalfCells hf(terrainCell.pFirst, terrainCell.pSecond);
 
-                            UpdateTerrainCell(m_indexer, hf, pTerrainVertices, pTerrainIndices);
+                            UpdateTerrainCellWrapper(m_indexer, hf, pTerrainVertices, pTerrainIndices, pTerrainVerticesLayer0, pTerrainIndicesLayer0);
                         }
                     }
                 }
 
                 m_terrainVertexBuffers[bufferIndex].m_pIB->Unlock();
+                m_terrainVertexBuffers[bufferIndex].m_pIBLayer0->Unlock();
                 m_terrainVertexBuffers[bufferIndex].m_pVB->Unlock();
+                m_terrainVertexBuffers[bufferIndex].m_pVBLayer0->Unlock();
             }
         }
         else
@@ -645,15 +717,21 @@ namespace env
             }
 
             std::vector<TerrainVertex*> terrainVertices;
+            std::vector<TerrainVertex*> terrainVerticesLayer0;
             terrainVertices.resize(m_terrainVertexBuffers.size());
+            terrainVerticesLayer0.resize(m_terrainVertexBuffers.size());
 
             std::vector<TerrainIndex*> terrainIndices;
+            std::vector<TerrainIndex*> terrainIndicesLayer0;
             terrainIndices.resize(m_terrainVertexBuffers.size());
+            terrainIndicesLayer0.resize(m_terrainVertexBuffers.size());
 
             for (size_t i = 0; i < m_terrainVertexBuffers.size(); ++i)
             {
                 terrainVertices[i] = static_cast<TerrainVertex*>(m_terrainVertexBuffers[i].m_pVB->Lock(0, 0, 0));
+                terrainVerticesLayer0[i] = static_cast<TerrainVertex*>(m_terrainVertexBuffers[i].m_pVBLayer0->Lock(0, 0, 0));
                 terrainIndices[i] = static_cast<TerrainIndex*>(m_terrainVertexBuffers[i].m_pIB->Lock(0, 0, 0));
+                terrainIndicesLayer0[i] = static_cast<TerrainIndex*>(m_terrainVertexBuffers[i].m_pIBLayer0->Lock(0, 0, 0));
             }
 
             for (mapHalfCells::iterator it = (*m_pHalfCells).begin(); it != (*m_pHalfCells).end(); ++it)
@@ -666,15 +744,19 @@ namespace env
                     continue;
 
                 TerrainVertex* pTerrainVertices = terrainVertices[m_indexer.GetVertexBufferIndex()];
+                TerrainVertex* pTerrainVerticesLayer0 = terrainVerticesLayer0[m_indexer.GetVertexBufferIndex()];
                 TerrainIndex* pTerrainIndices = terrainIndices[m_indexer.GetVertexBufferIndex()];
+                TerrainIndex* pTerrainIndicesLayer0 = terrainIndicesLayer0[m_indexer.GetVertexBufferIndex()];
 
-                UpdateTerrainCell(m_indexer, it->second, pTerrainVertices, pTerrainIndices);
+                UpdateTerrainCellWrapper(m_indexer, it->second, pTerrainVertices, pTerrainIndices, pTerrainVerticesLayer0, pTerrainIndicesLayer0);
             }
 
             for (auto& pTerrainVB : m_terrainVertexBuffers)
             {
                 pTerrainVB.m_pVB->Unlock();
+                pTerrainVB.m_pVBLayer0->Unlock();
                 pTerrainVB.m_pIB->Unlock();
+                pTerrainVB.m_pIBLayer0->Unlock();
             }
         }
     }
@@ -1416,9 +1498,9 @@ namespace env
     }
 
     //-----------------------------------------------------------------------------------
-    void CTerrainMgrGPU::AddIndexDataToindexBuffer(const CTerrainCellIndexer& indexer, TerrainIndex* w, unsigned int baseIndex, CELL_LAYOUT cellLayout)
+    void CTerrainMgrGPU::AddIndexDataToindexBuffer(const CTerrainCellIndexer& indexer, unsigned int& numTerrainIndices, TerrainIndex* w, unsigned int baseIndex, CELL_LAYOUT cellLayout)
     {
-        TerrainBufferCell& cell = m_terrainVertexBuffers[indexer.GetVertexBufferIndex()];
+        //TerrainBufferCell& cell = m_terrainVertexBuffers[indexer.GetVertexBufferIndex()];
 
         unsigned int vertexBaseIndex = indexer.GetBufferCellIndex() * 6;
         unsigned int offset = 0;
@@ -1429,32 +1511,32 @@ namespace env
         {
             for (int i = 0; i < 6; ++i)
             {
-                w[cell.m_numTerrainIndices++] = baseIndex + i;
+                w[numTerrainIndices++] = baseIndex + i;
             }
         }
         else if (cellLayout == CELL_LAYOUT_BOTLEFT)
         {
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 0;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 1;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 2;
+            w[numTerrainIndices++] = baseIndex + offset + 0;
+            w[numTerrainIndices++] = baseIndex + offset + 1;
+            w[numTerrainIndices++] = baseIndex + offset + 2;
         }
         else if (cellLayout == CELL_LAYOUT_BOTRIGHT)
         {
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 0;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 1;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 2;
+            w[numTerrainIndices++] = baseIndex + offset + 0;
+            w[numTerrainIndices++] = baseIndex + offset + 1;
+            w[numTerrainIndices++] = baseIndex + offset + 2;
         }
         else if (cellLayout == CELL_LAYOUT_TOPLEFT)
         {
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 0;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 1;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 2;
+            w[numTerrainIndices++] = baseIndex + offset + 0;
+            w[numTerrainIndices++] = baseIndex + offset + 1;
+            w[numTerrainIndices++] = baseIndex + offset + 2;
         }
         else if (cellLayout == CELL_LAYOUT_TOPRIGHT)
         {
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 0;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 1;
-            w[cell.m_numTerrainIndices++] = baseIndex + offset + 2;
+            w[numTerrainIndices++] = baseIndex + offset + 0;
+            w[numTerrainIndices++] = baseIndex + offset + 1;
+            w[numTerrainIndices++] = baseIndex + offset + 2;
         }
     }
 

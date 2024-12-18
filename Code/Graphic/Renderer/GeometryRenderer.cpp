@@ -371,6 +371,25 @@ namespace env
         }
     }
 
+    //-----------------------------------------------------------------------------------
+    void CGeometryRenderer::RenderGeometryDeferredLayer0(RenderQueue& renderQueue, RenderSet& renderSet)
+    {
+        ENV_SCOPED_GPU_PROFILING(GEOMETRY_RENDERER, RenderGeometryDeferred);
+
+        if (renderQueue.bRenderMeshes)
+        {
+            m_pDevice->ResetToDefaultRenderStates();
+            m_pDevice->SetShader(GetGeometryShader(renderQueue));
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILENABLE, true);
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILFUNC, COMPARISON_TYPE_ALWAYS);
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILPASS, STENCILOP_TYPE_REPLACE);
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILFAIL, STENCILOP_TYPE_REPLACE);
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILZFAIL, STENCILOP_TYPE_KEEP);
+
+            Render(renderQueue, m_pGeometryVertexDeclaration.get(), renderQueue.m_meshInstances[MESH_RENDER_CATEGORY_DEFERRED_LAYER0], Matrix4x4(1.0f));
+        }
+    }
+
     void CGeometryRenderer::RenderGeometryCharacter(RenderQueue& renderQueue, RenderSet& renderSet)
     {
         ENV_SCOPED_GPU_PROFILING(GEOMETRY_RENDERER, RenderGeometryCharacter);
@@ -829,6 +848,18 @@ namespace env
     //-----------------------------------------------------------------------------------
     void CGeometryRenderer::RenderLevelTerrain(RenderQueue& renderQueue, RenderSet& renderSet)
     {
+        RenderLevelTerrainInternal(renderQueue, renderSet, false);
+    }
+   
+    //-----------------------------------------------------------------------------------
+    void CGeometryRenderer::RenderLevelTerrainLayer0(RenderQueue& renderQueue, RenderSet& renderSet)
+    {
+        RenderLevelTerrainInternal(renderQueue, renderSet, true);
+    }
+
+    //-----------------------------------------------------------------------------------
+    void CGeometryRenderer::RenderLevelTerrainInternal(RenderQueue& renderQueue, RenderSet& renderSet, bool bLayer0)
+    {
         ENV_SCOPED_GPU_PROFILING(GEOMETRY_RENDERER, RenderLevelTerrain);
 
         if (!renderQueue.bRenderLevelTerrain)
@@ -853,6 +884,8 @@ namespace env
         m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILFAIL, STENCILOP_TYPE_REPLACE);
         m_pDevice->SetRenderState(RENDERSTATE_TYPE_STENCILZFAIL, STENCILOP_TYPE_KEEP);
 
+        if (bLayer0)
+            m_pDevice->SetRenderState(RENDERSTATE_TYPE_ZFUNC, COMPARISON_TYPE_ALWAYS);
 
         m_pDevice->SetVertexDeclaration(m_pLevelVertexDeclaration.get());
 
@@ -914,9 +947,16 @@ namespace env
 
             for (auto& terrainCellBuffer : renderQueue.m_pLevelGridRenderObject->m_terrainBuffers)
             {
-                m_numTerrainTrianglesRendered += terrainCellBuffer.m_numTerrainTriangles;
+                m_numTerrainTrianglesRendered += terrainCellBuffer.m_numTerrainTrianglesLayer0;
 
-                if (terrainCellBuffer.m_numTerrainTriangles > 0)
+                if (bLayer0 && terrainCellBuffer.m_numTerrainTrianglesLayer0 > 0)
+                {
+                    m_pDevice->SetIndexBuffer(terrainCellBuffer.m_pIBLayer0);
+                    m_pDevice->SetVertexBuffer(0, 0, terrainCellBuffer.m_pVBLayer0);
+                    m_pDevice->DrawIndexedPrimitive(PRIMITIVE_TYPE_TRIANGLELIST, 0, 0, 0, 0, terrainCellBuffer.m_numTerrainTrianglesLayer0);
+                }
+
+                if (!bLayer0 && terrainCellBuffer.m_numTerrainTriangles > 0)
                 {
                     m_pDevice->SetIndexBuffer(terrainCellBuffer.m_pIB);
                     m_pDevice->SetVertexBuffer(0, 0, terrainCellBuffer.m_pVB);
