@@ -51,6 +51,7 @@ namespace env
         void CleanupDeferredRendering(RenderQueue& renderQueue, RenderSet& renderSet);
 
         void RenderGeometryDeferred(RenderQueue& renderQueue, RenderSet& renderSet);
+        void RenderGeometryDeferredLayer0(RenderQueue& renderQueue, RenderSet& renderSet);
         void RenderGeometryTransmissive(RenderQueue& renderQueue, RenderSet& renderSet);
         void RenderGeometryForward(RenderQueue& renderQueue, RenderSet& renderSet);
         void RenderGeometryOutline(RenderQueue& renderQueue, RenderSet& renderSet);
@@ -62,7 +63,10 @@ namespace env
 
         void RenderLevelTerrainPreview(RenderQueue& renderQueue, RenderSet& renderSet);
         void RenderLevelTerrainBorder(RenderQueue& renderQueue, RenderSet& renderSet);
+        
         void RenderLevelTerrain(RenderQueue& renderQueue, RenderSet& renderSet);
+        void RenderLevelTerrainLayer0(RenderQueue& renderQueue, RenderSet& renderSet);
+        void RenderLevelTerrainInternal(RenderQueue& renderQueue, RenderSet& renderSet, bool bLayer0);
         void RenderLevelTerrainSelection(RenderQueue& renderQueue, RenderSet& renderSet);
 
 

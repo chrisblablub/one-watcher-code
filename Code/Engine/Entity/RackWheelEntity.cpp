@@ -220,6 +220,14 @@ namespace env
     void CRackWheelEntity::Update(float dt)
     {
         CMeshEntity::Update(dt);
+        auto meshInstances = GetMeshInstanceContainer().GetMeshInstances();
+        GetMeshInstanceContainer().CallForEach([](CMeshInstance* pSubMeshInst) { 
+            if (pSubMeshInst->GetMaterial().GetRenderCategoryMask() & RenderCategory2Bitmask(MESH_RENDER_CATEGORY_DEFERRED))
+            {
+                pSubMeshInst->GetMaterial().RemoveRenderCategory(MESH_RENDER_CATEGORY_DEFERRED);
+                pSubMeshInst->GetMaterial().AddRenderCategory(MESH_RENDER_CATEGORY_DEFERRED_LAYER0);
+            }
+        });
 
         ApplyTransform(GetMeshInstanceNode(0)->GetDerivedRST(), m_pNode->GetDerivedScale().x);
     }
