@@ -1,6 +1,6 @@
 #include <OneWatcher/Core/SteamHandler.h>
 
-
+#ifdef ENV_FINAL
 const char* const SteamHandler::STAT_PROGRESS_CHAPTER_1 = "p_c1";
 const char* const SteamHandler::STAT_PROGRESS_CHAPTER_2 = "p_c2";
 const char* const SteamHandler::STAT_PROGRESS_CHAPTER_3 = "p_c3";
@@ -14,6 +14,7 @@ const char* const SteamHandler::ACHIEVEMENT_FINISHED_CHAPTER_4 = "FINISHED_CHAPT
 
 bool SteamHandler::Init()
 {
+#ifdef ENV_FINAL
     if (SteamAPI_RestartAppIfNecessary(STEAM_APP_ID))
     {
         return false;
@@ -23,17 +24,21 @@ bool SteamHandler::Init()
     {
         return false;
     }
+#endif
     return true;
 }
 
 void SteamHandler::Update()
 {
+#ifdef ENV_FINAL
     SteamAPI_RunCallbacks();
     bool result = SteamUserStats()->RequestCurrentStats();
+#endif
 }
 
 void SteamHandler::OnUserStatsReceived(UserStatsReceived_t* callback)
 {
+#ifdef ENV_FINAL
     EResult requestResult = callback->m_eResult;
 
     if (requestResult != EResult::k_EResultOK)
@@ -47,10 +52,12 @@ void SteamHandler::OnUserStatsReceived(UserStatsReceived_t* callback)
     {
         return;
     }
+#endif
 }
 
 void SteamHandler::OnUserStatsStored(UserStatsStored_t* callback)
 {
+#ifdef ENV_FINAL
     EResult requestResult = callback->m_eResult;
 
     if (requestResult != EResult::k_EResultOK)
@@ -64,15 +71,19 @@ void SteamHandler::OnUserStatsStored(UserStatsStored_t* callback)
     {
         return;
     }
+#endif
 }
 
 void SteamHandler::Shutdown()
 {
+#ifdef ENV_FINAL
     SteamAPI_Shutdown();
+#endif
 }
 
 void SteamHandler::IncreaseStat(const char* const key)
 {
+#ifdef ENV_FINAL
     int currentValue = 0;
     CSteamID userID = SteamUser()->GetSteamID();
 
@@ -84,32 +95,42 @@ void SteamHandler::IncreaseStat(const char* const key)
     }
 
     SetStat(key, ++currentValue);
+#endif
 }
 
 void SteamHandler::SetAchievement(const char* id)
 {
+#ifdef ENV_FINAL
     SteamUserStats()->SetAchievement(id);
     StoreStats();
+#endif
 }
 
 void SteamHandler::SetStat(const char* const key, const int value)
 {
+#ifdef ENV_FINAL
     SteamUserStats()->SetStat(key, value);
     StoreStats();
+#endif
 }
 
 void SteamHandler::StoreStats()
 {
+#ifdef ENV_FINAL
     SteamUserStats()->StoreStats();
+#endif
 }
 
 void SteamHandler::IncreaseStat_DeathCounter()
 {
+#ifdef ENV_FINAL
     IncreaseStat(STAT_DEATH_COUNTER);
+#endif
 }
 
 void SteamHandler::SetStat_ChapterProgress(const int chapter, const int levelBested, const bool bossFinished)
 {
+#ifdef ENV_FINAL
     switch (chapter)
     {
     case 0:
@@ -143,4 +164,7 @@ void SteamHandler::SetStat_ChapterProgress(const int chapter, const int levelBes
     default:
         break;
     }
+#endif
 }
+
+#endif

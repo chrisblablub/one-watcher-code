@@ -2,15 +2,40 @@
 // Project Configs
 // ============================================================================
 
+.Defines = 'WIN32;'
+		 + '_WIN32;'
+		 + '__WINDOWS__;'
+		 + 'WIN32_LEAN_AND_MEAN;'
+		 + 'ENV_GRAPHIC_API_D3D11;'
+		 + 'BOOST_EXCEPTION_DISABLE;'
+		 + 'ENV_PLATFORM_WINDOWS;'
+
+.Includes = './;'
+		  + '^$(SolutionDir)\..\Code;'
+		  + '^$(SolutionDir)\..\Code\Graphic;'
+		  + '^$(SolutionDir)\..\Code\QEditorPanelBox\Core;'
+		  + '^$(SolutionDir)\..\$GlmIncludePath$;'
+		  + '^$(SolutionDir)\..\$BoostIncludePath$;'
+		  + '^$(SolutionDir)\..\$AssimpIncludePath$;'
+		  + '^$(SolutionDir)\..\$QtIncludePath$;'
+		  + '^$(SolutionDir)\..\$SteamIncludePath$;'
+		  + '^$(SolutionDir)\..\$fmodIncludePath$;'
+		  + '$WinSDKIncUM$;'
+		  + '$WinSDKIncUCRT$;'
+		  + '$WinSDKIncSHARED$;'
+		  + '$WinSDKIncWINRT$;'
+		  + '$VSRoot$\VC\Tools\MSVC\14.29.30133\include'
+
 .ProjectCommon =
 [
-	.ProjectBuildCommand	= 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache ^$(ProjectName)-^$(Platform)-^$(Configuration)'
-	.ProjectRebuildCommand	= 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache -clean ^$(ProjectName)-^$(Platform)-^$(Configuration)'
+	.ProjectBuildCommand	 = 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache ^$(ProjectName)-^$(Platform)-^$(Configuration)'
+	.ProjectRebuildCommand	 = 'cd ^$(SolutionDir)\..\ &amp; fbuild -vs -cache -clean ^$(ProjectName)-^$(Platform)-^$(Configuration)'
 	
-	.OutputDirectory		= '^$(SolutionDir)\..\$IntermediateDir$'
-	.IntermediateDirectory	= '^$(SolutionDir)\..\$IntermediateDir$'
-
-	.PlatformToolset		= 'v140'
+	.OutputDirectory		 = '^$(SolutionDir)\..\$IntermediateDir$'
+	.IntermediateDirectory	 = '^$(SolutionDir)\..\$IntermediateDir$'
+	.IncludeSearchPath		 = "$Includes$"
+	.PreprocessorDefinitions = "$Defines$"
+	.PlatformToolset		 = 'v142'
 ]
 
 // ----------------------------------------------------------------------------
@@ -22,7 +47,8 @@
 	Using( .ProjectCommon ) 
 	
 	.Config   = 'Debug' 
-	.Platform = 'Win32'
+	.Platform = 'Win32' 
+	.PreprocessorDefinitions + 'DEBUG;_DEBUG'
 	
 	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x86_d.exe'
 	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
@@ -67,34 +93,6 @@
 	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
 ]
 
-// ----------------------------------------------------------------------------
-// VS2015 x64
-// ----------------------------------------------------------------------------
-
-.ProjectX64Debug = 
-[ 
-	Using( .ProjectCommon ) 
-	
-	.Config   = 'Debug' 
-	.Platform = 'x64'
-	
-	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x64_d.exe'
-	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
-]
-
-// ----------------------------------------------------------------------------
-
-.ProjectX64Release = 
-[ 
-	Using( .ProjectCommon ) 
-	
-	.Config   = 'Release' 
-	.Platform = 'x64'
-	
-	.LocalDebuggerCommand 			= '^$(SolutionDir)..\$Platform$\^$(ProjectName)_x64_r.exe'
-	.LocalDebuggerWorkingDirectory 	= '^$(SolutionDir)..\$Platform$'
-]
-
 // ============================================================================
 // Projects
 // ============================================================================
@@ -102,11 +100,7 @@
 .ProjectConfigs = { .ProjectX86Debug,
 					.ProjectX86Release,
 					.ProjectX86Final,
-					.ProjectX86Profile,
-					.ProjectX64Debug,
-					.ProjectX64Release }
+					.ProjectX86Profile }
 					
 .ProjectConfigsEditor = { .ProjectX86Debug,
-						  .ProjectX86Release,
-						  .ProjectX64Debug,
-						  .ProjectX64Release }
+						  .ProjectX86Release }

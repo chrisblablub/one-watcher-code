@@ -15,6 +15,7 @@
 		.ProjectOutput	   = 'Build\$ProjectName$\$ProjectName$.vcxproj'
 		.ProjectInputPaths = '$ProjectRoot$'
 		.ProjectBasePath   = '$ProjectRoot$'
+		.ForcedIncludes    = '..\$ProjectRoot$\$PCHName$.h'
 	}
 	
 	// ============================================================================
@@ -40,7 +41,7 @@
 		{
 			.CompilerInputUnity	= '$ProjectName$-Unity-Windows'
 			.CompilerOutputPath	= '$IntermediateDir$\$Platform$\$Config$\$ProjectName$'
-			
+
 			.LibrarianOutput	= '$IntermediateDir$\$Platform$\$Config$\$ProjectName$\$ProjectName$$PlatformSuffix$$BuildSuffix$.lib'
 		}
 		
@@ -52,14 +53,12 @@
 
 	Alias( '$ProjectName$-Debug' )
 	{
-		.Targets = { '$ProjectName$-x86-Debug', 
-					 '$ProjectName$-x64-Debug' }
+		.Targets = { '$ProjectName$-x86-Debug' }
 	}
 	
 	Alias( '$ProjectName$-Release' )
 	{
-		.Targets = { '$ProjectName$-x86-Release', 
-					 '$ProjectName$-x64-Release' }
+		.Targets = { '$ProjectName$-x86-Release' }
 	}
 	
 	Alias( '$ProjectName$-Final' )
