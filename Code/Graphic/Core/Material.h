@@ -19,12 +19,14 @@ namespace env
         MESH_RENDER_CATEGORY_FORWARD = 1,
         MESH_RENDER_CATEGORY_CHARACTER = 2,
         MESH_RENDER_CATEGORY_OUTLINE = 3,
-        MESH_RENDER_CATEGORY_TRANSMISSIVE = 4
+        MESH_RENDER_CATEGORY_TRANSMISSIVE = 4,
+        MESH_RENDER_CATEGORY_DEFERRED_LAYER0 = 5,
     };
+
 
     typedef unsigned long MeshRenderCategoryMask;
 
-    extern const MESH_RENDER_CATEGORY gMeshRenderCategories[5];
+    extern const MESH_RENDER_CATEGORY gMeshRenderCategories[6];
 
 #define MESH_RENDER_MODE_COUNT (sizeof(gMeshRenderCategories) / sizeof(gMeshRenderCategories[0]))
 
