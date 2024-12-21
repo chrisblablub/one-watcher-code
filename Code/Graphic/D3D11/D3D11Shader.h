@@ -176,7 +176,7 @@ namespace env
 
         struct ShaderAllocationPolicy
         {
-            ShaderAllocationPolicy() 
+            ShaderAllocationPolicy()
                 : m_pDevice(nullptr) {}
 
             ShaderAllocationPolicy(CRenderDevice* pDevice)
@@ -188,13 +188,13 @@ namespace env
         };
 
 
-        typedef CResMgrBase< std::string, 
-                             CShader, 
-                             ShaderAllocationPolicy, 
-                             ShaderReloadPolicy > CShaderMgr;
+        typedef CResMgrBase< std::string,
+            CShader,
+            ShaderAllocationPolicy,
+            ShaderReloadPolicy > CShaderMgr;
 
-        CShader(ID3D11Device* pDevice, 
-                ID3D11DeviceContext* pDeviceContext)
+        CShader(ID3D11Device* pDevice,
+            ID3D11DeviceContext* pDeviceContext)
             : m_pDevice(pDevice)
             , m_pDeviceContext(pDeviceContext)
             , m_InitialLoad(false)
@@ -230,6 +230,7 @@ namespace env
             unsigned int index = GetConstantBufferIndexByName(strConstBufName);
 
             m_constantBuffers[index].m_pConstBufferCPU = &constBufferCPU;
+            m_constantBuffersLinked[strConstBufName] = &constBufferCPU;
         }
 
         void CompileConstantBuffers()
@@ -259,11 +260,11 @@ namespace env
                 constBufGPU.m_pConstBufferCPU->SetDirty(false);
             }
         }
-        std::vector<vecConstantBuffersGPU>& GetConstantBuffers() 
-        { 
+        std::vector<vecConstantBuffersGPU>& GetConstantBuffers()
+        {
             return m_constantBuffersGPU;
         }
-        
+
         ID3DBlob* GetCode() const { return m_pShaderCode; }
 
         const std::string& GetName() { return m_strName; }
@@ -273,8 +274,8 @@ namespace env
         friend class CShaderMgr;
 
         bool InitResource(const std::string& strName, const std::string& str, _FILETIME* pFt);
-        bool LoadShader(const std::string& strShaderFilename, const std::string& strShaderCompiledFilename, 
-                        const std::string& strEntryPoint, const std::string& strTarget, ID3DBlob** ppCode);
+        bool LoadShader(const std::string& strShaderFilename, const std::string& strShaderCompiledFilename,
+            const std::string& strEntryPoint, const std::string& strTarget, ID3DBlob** ppCode);
 
         void ReleaseConstantBuffers();
         bool InitConstantBuffers();
@@ -285,29 +286,30 @@ namespace env
         bool m_bDirty;
         bool m_InitialLoad;
 
-        ID3D11Device*           m_pDevice;
-        ID3D11DeviceContext*    m_pDeviceContext;
-        ID3D11VertexShader*     m_pVertexShader;
-       // ID3D11ShaderReflection* m_pVertexShaderReflection;
-        ID3D11PixelShader*      m_pPixelShader;
+        ID3D11Device* m_pDevice;
+        ID3D11DeviceContext* m_pDeviceContext;
+        ID3D11VertexShader* m_pVertexShader;
+        // ID3D11ShaderReflection* m_pVertexShaderReflection;
+        ID3D11PixelShader* m_pPixelShader;
         //ID3D11ShaderReflection* m_pPixelShaderReflection;
-        ID3D11HullShader*       m_pHullShader;
+        ID3D11HullShader* m_pHullShader;
         //ID3D11ShaderReflection* m_pHullShaderReflection;
-        ID3D11DomainShader*     m_pDomainShader;
-       // ID3D11ShaderReflection* m_pDomainShaderReflection;
-        ID3D11GeometryShader*   m_pGeometryShader;
+        ID3D11DomainShader* m_pDomainShader;
+        // ID3D11ShaderReflection* m_pDomainShaderReflection;
+        ID3D11GeometryShader* m_pGeometryShader;
         //ID3D11ShaderReflection* m_pGeometryShaderReflection;
-        ID3D11ComputeShader*    m_pComputeShader;
+        ID3D11ComputeShader* m_pComputeShader;
         //ID3D11ShaderReflection* m_pComputeShaderReflection;
-        ID3DBlob*               m_pShaderCode;
+        ID3DBlob* m_pShaderCode;
 
         std::string m_strName;
         std::string m_strFilename;
 
         std::vector<vecConstantBuffersGPU> m_constantBuffersGPU;
         std::vector<ConstantBufferGPU> m_constantBuffers;
-
+        std::map<std::string, CConstantBufferCPUBase*> m_constantBuffersLinked;
         std::map<std::string, unsigned int> m_constantBufferIndex;
+        
 
         std::vector< ID3D11ShaderReflection* >  m_shaderReflections;
 

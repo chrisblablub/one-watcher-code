@@ -121,7 +121,7 @@ namespace env
             ENV_DXCALL(device->CreateShaderResourceView(pTex, &viewDesc, &pSRV));
 
             m_pTex = new CTextureBase(device, deviceContext, pTex, pSRV, textureWidth, textureHeight);
-            deviceContext->GenerateMips(pSRV);
+            //deviceContext->GenerateMips(pSRV);
 
             m_pTex->SetTextureSampler(CDefaultTextureSampler::GetLinearMipClampSampler());
         }

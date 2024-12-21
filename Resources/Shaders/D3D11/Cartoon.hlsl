@@ -130,7 +130,6 @@ void DoFogShading(const in float linearDepth,
 float4 PS(OutputVS input) : SV_Target
 {	
     float3 color = t0.Sample(s0, input.tex).rgb;
-
     
     float linearDepth = ComputeLinearDepth(t1, s1, input.tex);
 
@@ -141,8 +140,6 @@ float4 PS(OutputVS input) : SV_Target
 
     // Silhouette shading
     DoSilhouetteShading(input.tex, 0.65f, 0.2f, color);
-
-    //return float4(color, 1.0);
 
     // Fog shading
     DoFogShading(linearDepth, color);

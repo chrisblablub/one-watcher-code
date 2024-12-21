@@ -66,7 +66,7 @@ float3 GetMeshWaterNormalSpec(float3 texCoords, float3 normal, float3x3 tangentT
     waterNormal01 = 2.0f * waterNormal01 - float3(1.0f, 1.0f, 1.0f);
     waterNormal01 = mul(waterNormal01, tangentToWorld).xyz;
 
-    return float4(waterNormal01, 1);
+    return float3(waterNormal01.rgb);
 
     /* float3 worldRight = float3(1, 0, 0);
     worldRight = normalize(mul(worldRight, tangentToWorld).xyz);

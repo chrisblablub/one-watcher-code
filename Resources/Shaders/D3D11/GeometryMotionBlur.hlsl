@@ -77,12 +77,12 @@ float4 PS(VSOutputMesh input, float4 vpos : SV_Position) : SV_Target0
     //uv.y = 1.0 - uv.y;
     //return float4(uv, 0, 1);
 
-    float3 c = t6.Sample(s6, uv);
+    float3 c = t6.Sample(s6, uv).rgb;
 
     for (int i = 1; i < nSamples; ++i)
     {
         float2 uvOffset = 1 * velocity * (float(i) / float(nSamples - 1) - 0.5);
-        c += t6.Sample(s6, uv + uvOffset);
+        c += t6.Sample(s6, uv + uvOffset).rgb;
     }
     c /= float(nSamples);
 

@@ -87,7 +87,7 @@ PSOutputTerrain PS(VSOutputMesh input)
         input.normal = mul(input.normal, model).xyz;
     }
 
-    input.normal = normalize(mul(input.normal, gView));
+    input.normal = normalize(mul(float4(input.normal, 1.0), gView)).xyz;
 
     float diffFactor = max(dot(input.normal, float3(0.0f, 0.0f, -1.0f)), 0.0f);
 

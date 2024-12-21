@@ -101,7 +101,7 @@ PSOutput PS(VSOutputTerrain input)
     float3 normal = float3(0.0f, 0.0f, -1.0f);
 
     float3x3 TBN;
-    TBN[0] = input.tangent;
+    TBN[0] = input.tangent.xyz;
     TBN[1] = input.biNormal;
     TBN[2] = normal;
 
@@ -132,7 +132,7 @@ PSOutput PS(VSOutputTerrain input)
     if (diff.a <= 0.1)
         discard;
 
-    normal = normalize(mul(normal, gView));
+    normal = normalize(mul(float4(normal, 1.0), gView)).xyz;
 
 
     float spec = 0.0;

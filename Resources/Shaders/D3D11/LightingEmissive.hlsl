@@ -40,7 +40,7 @@ VSOutputDirectional VS(float3 pos : POSITION0)
 
 float4 PS(VSOutputDirectional input, float4 tex0 : SV_Position) : SV_Target0
 {
-    float2 tex = tex0 * gInvScreenSize;;
+    float2 tex = tex0.xy * gInvScreenSize;;
 
     return float4(t0.Sample(s0, tex).rgb, 1.0f);
 }

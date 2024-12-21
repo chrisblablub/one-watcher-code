@@ -211,12 +211,10 @@ namespace env
         std::string strComputeShaderCompiled = GetComputeShaderCompiledName(m_strFilename);
 
         m_shaderReflections.resize(SHADER_TYPE_COUNT);
-        m_constantBuffers.resize(SHADER_TYPE_COUNT);
 
         for (unsigned int i = 0; i < m_shaderReflections.size(); ++i)
         {
             m_shaderReflections[i] = nullptr;
-            m_constantBuffers.clear();
         }
 
         // Load and create vertex shader
@@ -261,14 +259,17 @@ namespace env
     //-----------------------------------------------------------------------------------
     void CShader::ReleaseConstantBuffers()
     {
-        for (auto it : m_constantBuffers)
+        for (auto& it : m_constantBuffers)
         {
             for (unsigned int i = 0; i < it.m_refCount; ++i)
                 gConstBufMgr->Release(it.m_bufferDesc.Name);
+
+            it.m_pBuffer = nullptr;
+            it.m_refCount = 0;
         }
 
-        m_constantBuffers.clear();
         m_constantBuffersGPU.clear();
+        m_constantBuffers.clear();
         m_constantBufferIndex.clear();
     }
 
@@ -299,15 +300,23 @@ namespace env
 
                 pConstBuf->GetDesc(&constantBuffer.m_bufferDesc);
 
-                auto it = m_constantBufferIndex.find(constantBuffer.m_bufferDesc.Name);
+                //auto it = m_constantBufferIndex.find(constantBuffer.m_bufferDesc.Name);
 
-                if (it != m_constantBufferIndex.end())
-                {
-                    constantBuffersGPU.push_back(m_constantBuffers[it->second].m_pBuffer);
+                //if (it != m_constantBufferIndex.end())
+                //{
+                //    // CB already exists -> reload
+                //    auto& itLinkedCB = m_linkedCBs.find(constantBuffer.m_bufferDesc.Name);
 
-                    m_constantBuffers[it->second].m_refCount++;
-                }
-                else
+                //    if (itLinkedCB != m_linkedCBs.end()) 
+                //    {
+                //        m_constantBuffers[it->second].m_pConstBufferCPU = itLinkedCB->second;
+                //    }
+
+                //    m_constantBuffers[it->second].m_refCount++;
+
+                //    constantBuffersGPU.push_back(m_constantBuffers[it->second].m_pBuffer);
+                //}
+                //else
                 {
                     D3D11_BUFFER_DESC constBufferDesc;
                     constBufferDesc.Usage = D3D11_USAGE_DYNAMIC;
@@ -324,8 +333,14 @@ namespace env
                     ENV_ASSERT_DBG(constBufferDesc.ByteWidth == pBufferGPU->GetBufferDesc().ByteWidth);
                     //ENV_DXCALL_RFALSE(m_pDevice->CreateBuffer(&constBufferDesc, 0, &constantBuffer.m_pBuffer));
 
-                    m_constantBuffers.push_back(constantBuffer);
+                    // Check if CB CPU has been linked before and if yes, set the pointer (i.e. shader reload)
+                    auto& itCB = m_constantBuffersLinked.find(constantBuffer.m_bufferDesc.Name);
+                    if (itCB != m_constantBuffersLinked.end())
+                    {
+                        constantBuffer.m_pConstBufferCPU = itCB->second;
+                    }
 
+                    m_constantBuffers.push_back(constantBuffer);
                     m_constantBufferIndex[constantBuffer.m_bufferDesc.Name] = m_constantBuffers.size() - 1;
 
                     constantBuffersGPU.push_back(constantBuffer.m_pBuffer);

@@ -32,7 +32,7 @@ VSOutput VS(float4 pos : POSITION0,
 
     outVS.posH = float4(pos.xyz, 1.0f);
     outVS.color = color;
-    outVS.pos = pos;
+    outVS.pos = pos.xyz;
 
     return outVS;
 }

@@ -97,7 +97,7 @@ PSOutput PS(VSOutputMesh input
         input.normal = mul(input.normal, model).xyz;
     }
 
-    input.normal = normalize(mul(input.normal, gView));
+    input.normal = normalize(mul(float4(input.normal, 1.0), gView)).xyz;
 
     float4 diff = float4(gDiffuseMtrl.rgb, 1);
 

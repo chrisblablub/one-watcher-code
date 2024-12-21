@@ -141,7 +141,7 @@ float4 PS(VSOutputMesh input) : SV_Target
     if (gHasEmissiveMap)
     {
         emissive.rgb = t3.Sample(s3, input.tex.xy).rgb;
-        diff.rgb *= (emissive.rgb * gEmissiveMtrl);
+        diff.rgb *= (emissive.rgb * gEmissiveMtrl.rgb);
     }
 
 

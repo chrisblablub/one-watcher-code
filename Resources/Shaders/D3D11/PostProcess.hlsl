@@ -101,7 +101,6 @@ float4 PS(OutputVS input) : SV_Target
 
     // Color Inversion
     // DoColorInversion(1.0f, color.rgb);
-
-    return float4(color.rgb, 1.0f);
+    return float4(color, 1.0f);
 }
 

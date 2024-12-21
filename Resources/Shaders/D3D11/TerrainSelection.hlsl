@@ -75,7 +75,7 @@ PSOutput PS(VSOutputTerrain input)
     float3 normalNMap = t1.Sample(s1, input.tex.xy).xyz;
     normalNMap = 2.0f * normalNMap - float3(1.0f, 1.0f, 1.0f);
     normal = mul(normalNMap, tangentToWorld).xyz;
-    normal = normalize(mul(normal, gView));
+    normal = normalize(mul(float4(normal, 1.0), gView)).xyz;
 
     float4 diff = float4(input.color, 1.0f) * t0.Sample(s0, input.tex.xy);
 
